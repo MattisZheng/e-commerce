@@ -5,7 +5,16 @@ import Footer from "../components/Footer/Footer";
 import { useState, useEffect } from "react";
 
 const Product = () => {
-  const [product, setProduct] = useState([]);
+  interface IProduct {
+    id: number;
+    title: string;
+    price: number;
+    category: string;
+    description: string;
+    image: string;
+  }
+
+  const [product, setProduct] = useState<IProduct>({ id: 0, title: "test", price: 0, category: "test", description: "test", image: "test" });
 
   async function getProduct(item: any) {
     const res = await fetch(`https://fakestoreapi.com/products/${item}`);
