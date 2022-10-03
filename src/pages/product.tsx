@@ -1,7 +1,6 @@
 import Nav from "../components/Nav";
 import Side from "../components/Side";
 import Footer from "../components/Footer";
-
 import { useState, useEffect } from "react";
 
 const Product = () => {
@@ -27,7 +26,7 @@ const Product = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <Nav />
       <Side />
       <h1>{product.title}</h1>
@@ -39,7 +38,7 @@ const Product = () => {
       <p>{product.description}</p>
       recommendation
       <Footer />
-    </div>
+    </>
   );
 };
 
