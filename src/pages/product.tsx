@@ -36,9 +36,11 @@ const Product = () => {
       <p>$ {product.price}</p>
       coupon shipping specs add to Cart combination
       <p>{product.description}</p>
+      <p>review</p>
+      <p>QA</p>
       recommendation
       <Footer />
-    </>
+    </p>
   );
 };
 
