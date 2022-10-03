@@ -18,10 +18,10 @@
 
 v0.0.0
 
-- [ ] v0.1 Layout
-- [ ] v0.2 Nav
-  - [ ] Search bar
+- [x] v0.1 Layout
+- [x] v0.2 Nav
   - [ ] Home
+  - [ ] Search bar
 - [ ] v0.3 Fake Store API
 - [ ] v0.4 Home page
   - [ ] Recommendation

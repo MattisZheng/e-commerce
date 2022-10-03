@@ -1,6 +1,6 @@
 import Nav from "../components/Nav/Nav";
 
-const Product = () => {
+const SearchResult = () => {
   return (
     <div>
       <Nav />
@@ -8,4 +8,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default SearchResult;
