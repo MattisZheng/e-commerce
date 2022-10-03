@@ -21,15 +21,15 @@ v0.0.0
 - [x] v0.1 Layout
 - [x] v0.2 Nav
 - [x] v0.3 API
-- [ ] v0.4 Routing
+- [x] v0.4 Product page
+  - [x] Images
+  - [x] Description
+  - [ ] Add to cart
 - [ ] v0.5 Home page
 - [ ] v0.6 Search bar
   - [ ] Recommendation
   - [ ] Categories
-- [ ] v0.7 Product page
-  - [ ] Images
-  - [ ] Add to cart
-  - [ ] Description
+- [ ] v0.7 Routing
 - [ ] v0.8 Auth
   - [ ] OAuth
   - [ ] Register

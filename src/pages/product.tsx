@@ -34,7 +34,7 @@ const Product = () => {
       <div className="container border-black">
         <img className="w-64" src={product.image} alt={product.title} />
       </div>
-      <p>{product.price}</p>
+      <p>$ {product.price}</p>
       <p>{product.description}</p>
       <Footer />
     </div>
