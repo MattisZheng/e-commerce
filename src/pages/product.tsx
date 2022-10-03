@@ -40,7 +40,7 @@ const Product = () => {
       <p>QA</p>
       recommendation
       <Footer />
-    </p>
+    </>
   );
 };
 
