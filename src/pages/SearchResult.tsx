@@ -1,6 +1,6 @@
-import Nav from "../components/Nav/Nav";
-import Side from "../components/Side/Side";
-import Footer from "../components/Footer/Footer";
+import Nav from  "../components/Nav" ;
+import Side from "../components/Side";
+import Footer from "../components/Footer";
 
 import { useState } from "react";
 
@@ -10,9 +10,8 @@ const SearchResult = () => {
   async function getResult() {
     const res = await fetch(`https://fakestoreapi.com/products`);
     const data = await res.json();
+    setResult(data);
   }
-
-  async function searchProduct() {}
 
   return (
     <div>

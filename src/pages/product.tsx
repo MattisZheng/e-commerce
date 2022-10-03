@@ -1,6 +1,6 @@
-import Nav from "../components/Nav/Nav";
-import Side from "../components/Side/Side";
-import Footer from "../components/Footer/Footer";
+import Nav from "../components/Nav";
+import Side from "../components/Side";
+import Footer from "../components/Footer";
 
 import { useState, useEffect } from "react";
 
@@ -35,11 +35,7 @@ const Product = () => {
         <img className="w-64" src={product.image} alt={product.title} />
       </div>
       <p>$ {product.price}</p>
-      coupon
-      shipping
-      specs
-      add to Cart
-      combination
+      coupon shipping specs add to Cart combination
       <p>{product.description}</p>
       recommendation
       <Footer />
