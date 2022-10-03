@@ -7,6 +7,10 @@ const home = () => {
     <div>
       <Nav />
       <Side />
+      Activities
+      Categories
+      Popular
+      On Sales
       <Footer />
     </div>
   );

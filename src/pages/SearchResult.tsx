@@ -2,8 +2,12 @@ import Nav from "../components/Nav/Nav";
 import Side from "../components/Side/Side";
 import Footer from "../components/Footer/Footer";
 
+import { useState } from "react";
+
 const SearchResult = () => {
-  async function getProducts() {
+  const [result, setResult] = useState<string>("");
+
+  async function getResult() {
     const res = await fetch(`https://fakestoreapi.com/products`);
     const data = await res.json();
   }
@@ -14,6 +18,7 @@ const SearchResult = () => {
     <div>
       <Nav />
       <Side />
+      Sort Order Display
       <Footer />
     </div>
   );
