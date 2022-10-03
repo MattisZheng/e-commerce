@@ -1,11 +1,11 @@
-import Nav from "../components/Nav/Nav";
-import Side from "../components/Side/Side";
-import Footer from "../components/Footer/Footer";
+import Nav from "../components/Nav";
+import Side from "../components/Side";
+import Footer from "../components/Footer";
 
-const home = () => {
+const Home = () => {
   return (
     <div>
-      <Nav />
+      <Nav/>
       <Side />
       Activities
       Categories
@@ -16,4 +16,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;
