@@ -20,28 +20,25 @@ v0.0.0
 
 - [x] v0.1 Layout
 - [x] v0.2 Nav
-  - [ ] Home
-  - [ ] Search bar
-- [ ] v0.3 Fake Store API
-- [ ] v0.4 Home page
+- [x] v0.3 API
+- [ ] v0.4 Routing
+- [ ] v0.5 Home page
+- [ ] v0.6 Search bar
   - [ ] Recommendation
   - [ ] Categories
-- [ ] v0.5 Product page
+- [ ] v0.7 Product page
   - [ ] Images
   - [ ] Add to cart
   - [ ] Description
-- [ ] v0.6 Routing
-  - [ ] 404
-  - [ ] Loading
-- [ ] v0.7 Auth
+- [ ] v0.8 Auth
   - [ ] OAuth
   - [ ] Register
   - [ ] Login
-- [ ] v0.8 Cart
+- [ ] v0.9 Cart
   - [ ] Local Storage
-- [ ] v0.9 Checkout
+- [ ] v0.10 Checkout
   - [ ] Stripe.js
-- [ ] v0.10 Unit Testing
+- [ ] v0.11 Unit Testing
 
 v1.0.0
 
