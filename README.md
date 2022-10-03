@@ -22,9 +22,6 @@ v0.0.0
 - [x] v0.2 Nav
 - [x] v0.3 API
 - [ ] v0.4 Routing
-  - [ ] 404
-  - [ ] Loading
-- [ ] Home
 - [ ] v0.5 Home page
 - [ ] v0.6 Search bar
   - [ ] Recommendation
