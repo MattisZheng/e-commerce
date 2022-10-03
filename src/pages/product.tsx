@@ -31,6 +31,9 @@ const Product = () => {
       <Nav />
       <Side />
       <h1>{product.title}</h1>
+      <div className="container border-black">
+        <img className="w-64" src={product.image} alt={product.title} />
+      </div>
       <p>{product.price}</p>
       <p>{product.description}</p>
       <Footer />
