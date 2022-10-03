@@ -1,7 +1,6 @@
 import Nav from "../components/Nav";
 import Side from "../components/Side";
 import Footer from "../components/Footer";
-
 import { useState, useEffect } from "react";
 
 const SearchResult = () => {
