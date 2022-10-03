@@ -24,8 +24,7 @@ v0.0.0
 - [x] v0.4 Product page
   - [x] Images
   - [x] Description
-  - [ ] Add to cart
-- [ ] v0.5 Home page
+- [x] v0.5 Home page
 - [ ] v0.6 Search bar
   - [ ] Recommendation
   - [ ] Categories
