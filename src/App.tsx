@@ -1,16 +1,23 @@
+import Nav from "./components/Nav/Nav";
+import Side from "./components/Side";
+import Footer from "./components/Footer";
+
 import Home from "./pages/Home";
 import Product from "./pages/Product";
-import SearchResult from "./pages/SearchResult";
+import Search from "./pages/Search";
 
 function App() {
   return (
-    <>
-      <div className="App">
+    <div className="App">
+      <Nav />
+      <Side />
+      <div>
         <Home />
         <Product />
-        <SearchResult />
+        <Search />
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }
 

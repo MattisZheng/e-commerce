@@ -1,9 +1,7 @@
-import Nav from "../components/Nav";
-import Side from "../components/Side";
-import Footer from "../components/Footer";
+
 import { useState, useEffect } from "react";
 
-const SearchResult = () => {
+const Search = () => {
   const [result, setResult] = useState<any>([]);
 
   async function getResult() {
@@ -19,8 +17,7 @@ const SearchResult = () => {
 
   return (
     <div>
-      <Nav />
-      <Side />
+
       Sort Order Display
       {result.map((item: any) => (
         <div key={item.id}>
@@ -29,9 +26,9 @@ const SearchResult = () => {
           <p>$ {item.price}</p>
         </div>
       ))}
-      <Footer />
+
     </div>
   );
 };
 
-export default SearchResult;
+export default Search;

@@ -1,6 +1,4 @@
-import Nav from "../components/Nav";
-import Side from "../components/Side";
-import Footer from "../components/Footer";
+
 import { useState, useEffect } from "react";
 
 const Product = () => {
@@ -27,8 +25,7 @@ const Product = () => {
 
   return (
     <>
-      <Nav />
-      <Side />
+
       <h1>{product.title}</h1>
       <div className="container border-black">
         <img className="w-64" src={product.image} alt={product.title} />
@@ -39,7 +36,7 @@ const Product = () => {
       <p>review</p>
       <p>QA</p>
       recommendation
-      <Footer />
+
     </>
   );
 };
