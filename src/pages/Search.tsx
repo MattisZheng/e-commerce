@@ -1,6 +1,4 @@
-import Nav from "../components/Nav/Nav";
-import Side from "../components/Side";
-import Footer from "../components/Footer";
+
 import { useState, useEffect } from "react";
 
 const Search = () => {
@@ -19,8 +17,7 @@ const Search = () => {
 
   return (
     <div>
-      <Nav />
-      <Side />
+
       Sort Order Display
       {result.map((item: any) => (
         <div key={item.id}>
@@ -29,7 +26,7 @@ const Search = () => {
           <p>$ {item.price}</p>
         </div>
       ))}
-      <Footer />
+
     </div>
   );
 };
