@@ -1,16 +1,14 @@
 import Home from "./pages/Home";
 import Product from "./pages/Product";
-import SearchResult from "./pages/SearchResult";
+import Search from "./pages/Search";
 
 function App() {
   return (
-    <>
-      <div className="App">
-        <Home />
-        <Product />
-        <SearchResult />
-      </div>
-    </>
+    <div className="App">
+      <Home />
+      <Product />
+      <Search />
+    </div>
   );
 }
 

@@ -3,7 +3,7 @@ import Side from "../components/Side";
 import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
 
-const SearchResult = () => {
+const Search = () => {
   const [result, setResult] = useState<any>([]);
 
   async function getResult() {
@@ -34,4 +34,4 @@ const SearchResult = () => {
   );
 };
 
-export default SearchResult;
+export default Search;

@@ -25,8 +25,8 @@ v0.0.0
   - [x] Images
   - [x] Description
 - [x] v0.5 Home page
-- [ ] v0.6 Search bar
-  - [ ] Recommendation
+- [x] v0.6 Search bar
+  - [x] Recommendation
   - [ ] Categories
 - [ ] v0.7 Routing
 - [ ] v0.8 Auth
