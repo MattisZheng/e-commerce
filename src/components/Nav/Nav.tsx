@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Nav = () => {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("search box");
 
   return (
     <div className="flex justify-between p-5">
@@ -9,9 +9,9 @@ const Nav = () => {
         <a href="">Home</a>
       </div>
       <div>
-        <div>
+        <div className="border-2" >
           <label htmlFor=""></label>
-          <input type="text" />
+          <input type="text" placeholder={search} />
           <button>Search</button>
         </div>
         <div>Recommendations</div>
