@@ -1,5 +1,7 @@
 # E-commerce Template
 
+> E-commerce Template build with React, TypeScript.
+
 ## Build with
 
 - React
@@ -11,9 +13,13 @@
 ## Usage
 
 ## Installation
+
 ## Doc
+
 ## Contribute guide
+
 ## License
+
 ## Dev log
 
 v0.0.0
