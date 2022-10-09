@@ -45,10 +45,14 @@ v0.0.0
   - [ ] Stripe.js
 - [ ] v0.11 Unit Testing
 
-v1.0.0
+v1.0.0 Main Site
 
 - [ ] v1.1 Web
 - [ ] v1.2 RWD
 - [ ] v1.3 Mobile
 - [ ] v1.4 PWA
 - [ ] v1.5 H5
+
+v2.0.0 Cross-platform
+
+v3.0.0 Back-end
