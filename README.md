@@ -14,7 +14,18 @@
 
 ## Installation
 
+```bash
+git clone https://github.com/MattisZheng/e-commerce.git
+npm install
+```
+
 ## Doc
+
+```mermaid
+flowchart LR
+
+```
+
 
 ## Contribute guide
 
@@ -24,22 +35,22 @@
 
 v0.0.0
 
-- [x] v0.1 Layout
-- [x] v0.2 Nav
-- [x] v0.3 API
-- [x] v0.4 Product page
+- [x] v0.01 Layout
+- [x] v0.02 Nav
+- [x] v0.03 API
+- [x] v0.04 Product page
   - [x] Images
   - [x] Description
-- [x] v0.5 Home page
-- [x] v0.6 Search bar
+- [x] v0.05 Home page
+- [x] v0.06 Search bar
   - [x] Recommendation
   - [ ] Categories
-- [ ] v0.7 Routing
+- [ ] v0.07 Routing
 - [ ] v0.8 Auth
-  - [ ] OAuth
+  - [ ] O0Auth
   - [ ] Register
   - [ ] Login
-- [ ] v0.9 Cart
+- [ ] v0.09 Cart
   - [ ] Local Storage
 - [ ] v0.10 Checkout
   - [ ] Stripe.js
