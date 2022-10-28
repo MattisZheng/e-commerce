@@ -5,12 +5,14 @@
 ## Build with
 
 - React
-- TypeScript
 - Stripe.js
 - Axios
 - Tailwind
+- Testing Library
 
 ## Usage
+
+
 
 ## Installation
 
@@ -21,11 +23,38 @@ npm install
 
 ## Doc
 
+### Work flow
+
 ```mermaid
 flowchart LR
 
+
 ```
 
+### UI flow
+
+```mermaid
+flowchart LR
+home[Home Page]
+search[Search Box]
+recommendation[Recommendation]
+product[Product]
+
+
+home --> search & recommendation
+```
+
+### Data flow
+
+```mermaid
+flowchart LR
+
+user[User]
+cart[Cart]
+history[History]
+
+user --> cart & history
+```
 
 ## Contribute guide
 
