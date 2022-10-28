@@ -12,8 +12,6 @@
 
 ## Usage
 
-
-
 ## Installation
 
 ```bash
@@ -23,31 +21,34 @@ npm install
 
 ## Doc
 
-### Work flow
+### Logic flow
 
 ```mermaid
 flowchart LR
 
-
+check_user --> |user exist| check_cart
 ```
 
 ### UI flow
 
 ```mermaid
 flowchart LR
+
 home[Home Page]
   search[Search Box]
   recommendation[Recommendation]
 result[Search Result]
-  filter[Filter]
   sort[Sort]
   product[Product]
 productPage[Product Page]
   product[Product]
 
 home --> search & recommendation
-
+result --> sort & product
+productPage --> product
 ```
+
+home --> search & recommendation
 
 ### Data flow
 
@@ -55,10 +56,11 @@ home --> search & recommendation
 flowchart LR
 
 user[User]
-cart[Cart]
-history[History]
+  accountInfo[Account Info]
+  cart[Cart]
+  searchHistory[Search History]
 
-user --> cart & history
+user --> accountInfo & cart & searchHistory
 ```
 
 ## Contribute guide
