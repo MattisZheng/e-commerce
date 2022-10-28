@@ -1,6 +1,6 @@
 # E-commerce Template
 
-> E-commerce Template build with React, TypeScript.
+> E-commerce website build with React.
 
 ## Build with
 
@@ -36,12 +36,17 @@ flowchart LR
 ```mermaid
 flowchart LR
 home[Home Page]
-search[Search Box]
-recommendation[Recommendation]
-product[Product]
-
+  search[Search Box]
+  recommendation[Recommendation]
+result[Search Result]
+  filter[Filter]
+  sort[Sort]
+  product[Product]
+productPage[Product Page]
+  product[Product]
 
 home --> search & recommendation
+
 ```
 
 ### Data flow
