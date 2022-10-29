@@ -1,6 +1,6 @@
 import Nav from "./components/Nav/Nav";
-import Side from "./components/Side";
-import Footer from "./components/Footer";
+import Side from "./layouts/Side";
+import Footer from "./layouts/Footer";
 
 import Home from "./pages/Home";
 import Product from "./pages/Product";
