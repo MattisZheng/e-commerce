@@ -82,15 +82,11 @@ v0.0.0
   - [x] Recommendation
   - [x] Categories
 - [ ] v0.07 Routing
-- [ ] v0.8 Auth
-  - [ ] O0Auth
-  - [ ] Register
-  - [ ] Login
-- [ ] v0.09 Cart
+- [ ] v0.08 Cart
   - [ ] Local Storage
-- [ ] v0.10 Checkout
+- [ ] v0.09 Checkout
   - [ ] Stripe.js
-- [ ] v0.11 Unit Testing
+- [ ] v0.10 Unit Testing
 
 v1.0.0 Main Site
 
