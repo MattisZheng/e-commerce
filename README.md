@@ -80,7 +80,7 @@ v0.0.0
 - [x] v0.05 Home page
 - [x] v0.06 Search bar
   - [x] Recommendation
-  - [ ] Categories
+  - [x] Categories
 - [ ] v0.07 Routing
 - [ ] v0.8 Auth
   - [ ] O0Auth
