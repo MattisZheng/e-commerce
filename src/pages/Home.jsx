@@ -1,11 +1,12 @@
-
 const Home = () => {
   return (
     <div>
-      Activities
-      Categories
-      Popular
-      On Sales
+      <div>
+        <a href="">Electronics</a>
+        <a href="">Jewelry</a>
+        <a href="">Man's</a>
+        <a href="">Women's</a>
+      </div>
     </div>
   );
 };
