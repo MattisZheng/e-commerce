@@ -4,25 +4,29 @@ import Recommendation from "../components/Recommendation";
 import Header from "../layouts/Header";
 
 const Product = ({ item }) => {
-  const [product, setProduct] = useState(
-    {
-      id: 1,
-      title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      price: 109.95,
-      description: "",
-      category: "",
-      image: "",
-      rating: {
-        rate: 4.5,
-        count: 120,
-      },
-    }
-  );
+  const [product, setProduct] = useState({
+    id: 1,
+    title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    price: 109.95,
+    description: "",
+    category: "",
+    image: "",
+    rating: {
+      rate: 4.5,
+      count: 120,
+    },
+  });
 
   async function getItem(item) {
-    const res = await fetch(`https://fakestoreapi.com/products/${item}`); // fetch from api
-    const data = await res.json(); // parse json
-    setProduct(data); // set data to state
+    try {
+      const res = await fetch(`https://fakestoreapi.com/products/${item}`); // fetch from api
+      const data = await res.json(); // parse json
+      console.log(data);
+      setProduct(data);
+    } catch (error) {
+      console.error(error);
+    }
+    // set data to state
   }
 
   useEffect(() => {
@@ -30,17 +34,22 @@ const Product = ({ item }) => {
     console.log("getItem");
   }, []);
 
-  const [recommendation, setRecommendation] = useState();
+  const [recommendation, setRecommendation] = useState([]);
 
   async function getRecommendation(category) {
-    const res = await fetch(`https://fakestoreapi.com/products/category/${category}`); // fetch from api
-    const data = await res.json(); // parse json
-    setRecommendation(data); // set data to state
+    try {
+      const res = await fetch(`https://fakestoreapi.com/products/category/${category}`); // fetch from api
+      const data = await res.json(); // parse json
+      setRecommendation(data); // set data to state
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   useEffect(() => {
     getRecommendation(product.category);
     console.log("getRecommendation");
+    console.log(recommendation);
   }, [product]);
 
   return (
@@ -57,19 +66,15 @@ const Product = ({ item }) => {
       <p>{product.rating.count}</p>
       <div>
         <div>
-          {recommendation &&
-            recommendation.map((item) => (
-              <div key={item.id}>
-                <img className="w-64" src={item.image} alt={item.title} />
-                <p>{item.title}</p>
-                <p>{item.price}</p>
-                <p>{item.rating.rate}</p>
-                <p>{item.rating.count}</p>
-              </div>
+          <h2>Recommendation</h2>
+          <div className="container border-black">
+            {recommendation.map((item) => (
+              <img className="w-64" src={item.image} alt={product.title} />
             ))}
+          </div>
         </div>
       </div>
-    // </div>
+    </div>
   );
 };
 
