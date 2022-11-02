@@ -23,8 +23,8 @@ const Product = ({ item }) => {
       const data = await res.json(); // parse json
       console.log(data);
       setProduct(data);
-    } catch (error) {
-      console.error(error);
+    } catch (err) {
+      console.error('err', err);
     }
     // set data to state
   }
@@ -41,8 +41,8 @@ const Product = ({ item }) => {
       const res = await fetch(`https://fakestoreapi.com/products/category/${category}`); // fetch from api
       const data = await res.json(); // parse json
       setRecommendation(data); // set data to state
-    } catch (error) {
-      console.error(error);
+    } catch (err) {
+      console.error('err', err);
     }
   }
 
@@ -67,11 +67,6 @@ const Product = ({ item }) => {
       <div>
         <div>
           <h2>Recommendation</h2>
-          <div className="container border-black">
-            {recommendation.map((item) => (
-              <img className="w-64" src={item.image} alt={product.title} />
-            ))}
-          </div>
         </div>
       </div>
     </div>

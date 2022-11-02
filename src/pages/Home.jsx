@@ -19,7 +19,7 @@ const Home = () => {
           <a href="">Women's</a>
         </section>
         <Product item={1} />
-        <section></section>
+        <Sale/>
       </main>
       <Footer />
     </div>
