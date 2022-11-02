@@ -1,6 +1,6 @@
 
-const Search = () => {
+const Result = () => {
   return <div></div>;
 };
 
-export default Search;
+export default Result;
