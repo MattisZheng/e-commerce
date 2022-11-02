@@ -3,7 +3,9 @@ const Header = () => {
   
   return (
     <div>
-      <h1>Home</h1>
+      <h1>
+      <a href=""></a>  Home
+      </h1>
       <div className="searchBox">
         <label htmlFor=""></label>
         <input type="text" />
