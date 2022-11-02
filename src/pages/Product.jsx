@@ -1,29 +1,33 @@
 import { useState, useEffect } from "react";
 import Item from "../components/Item";
 import Recommendation from "../components/Recommendation";
-
+import Header from "../layouts/Header";
 
 const Product = ({ item }) => {
-  const [product, setProduct] = useState({
-    id: 1,
-    title: "title",
-    price: 9999.99,
-    description: "description",
-    category: "category",
-    image: "image link",
-    rating: { rate: 0.0, count: 0 },
-  });
+  const [product, setProduct] = useState(
+    {
+      id: 1,
+      title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      price: 109.95,
+      description: "",
+      category: "",
+      image: "",
+      rating: {
+        rate: 4.5,
+        count: 120,
+      },
+    }
+  );
 
-  // fetch product from api
-  async function getProduct(item) {
+  async function getItem(item) {
     const res = await fetch(`https://fakestoreapi.com/products/${item}`); // fetch from api
     const data = await res.json(); // parse json
     setProduct(data); // set data to state
   }
 
   useEffect(() => {
-    getProduct(item);
-    console.log("item");
+    getItem(item);
+    console.log("getItem");
   }, []);
 
   const [recommendation, setRecommendation] = useState();
@@ -36,14 +40,12 @@ const Product = ({ item }) => {
 
   useEffect(() => {
     getRecommendation(product.category);
-    console.log("recommendation");
+    console.log("getRecommendation");
   }, [product]);
 
   return (
     <div>
       <Header />
-      <Item item={product} />
-      <Recommendation recommendation={recommendation} />
       <h1>{product.title}</h1>
       <div className="container border-black">
         <img className="w-64" src={product.image} alt={product.title} />
@@ -53,7 +55,7 @@ const Product = ({ item }) => {
       <p>{product.description}</p>
       <p>{product.rating.rate}</p>
       <p>{product.rating.count}</p>
-      <div >
+      <div>
         <div>
           {recommendation &&
             recommendation.map((item) => (
@@ -67,7 +69,7 @@ const Product = ({ item }) => {
             ))}
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

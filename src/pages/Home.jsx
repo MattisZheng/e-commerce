@@ -1,6 +1,8 @@
+import { Swiper, SwiperSlide } from "swiper/react";
 import Header from "../layouts/Header";
 import Footer from "../layouts/Footer";
-import { Swiper, SwiperSlide } from "swiper/react";
+import Sale from "../components/Sale";
+import Product from "./Product";
 
 import "swiper/css";
 
@@ -9,21 +11,14 @@ const Home = () => {
     <div>
       <Header />
       <main>
-        <section>
-          <Swiper spaceBetween={50} slidesPerView={3}>
-            <SwiperSlide>1</SwiperSlide>
-            <SwiperSlide>2</SwiperSlide>
-            <SwiperSlide>3</SwiperSlide>
-            <SwiperSlide>4</SwiperSlide>
-          </Swiper>
-        </section>
+        <section>Swiper</section>
         <section>
           <a href="">Electronics</a>
           <a href="">Jewelry</a>
           <a href="">Man's</a>
           <a href="">Women's</a>
         </section>
-        <section>熱銷</section>
+        <Product item={1} />
         <section></section>
       </main>
       <Footer />
