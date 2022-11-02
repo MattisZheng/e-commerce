@@ -84,8 +84,6 @@ v0.0.0
 - [ ] v0.07 Routing
 - [ ] v0.08 Cart
   - [ ] Local Storage
-- [ ] v0.09 Checkout
-  - [ ] Stripe.js
 - [ ] v0.10 Unit Testing
 
 v1.0.0 Main Site
