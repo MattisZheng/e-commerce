@@ -1,18 +1,28 @@
 import { useState, useEffect } from "react";
 
-const Product = ({item}) => {
-  const [product, setProduct] = useState({ id: 0, title: "test", price: 0, category: "test", description: "test", image: "test" });
+const Product = () => {
+  const [product, setProduct] = useState({
+    id: 1,
+    title: "title",
+    price: 9999.99,
+    description:
+      "description",
+    category: "category",
+    image: "image link",
+    rating: { rate: 0.0, count: 0 },
+  });
 
   // fetch product from api
-  async function getProduct(item) {
-    const res = await fetch(`https://fakestoreapi.com/products/${1}`);
-    const data = await res.json();
-    setProduct(data);
+  async function getProduct() {
+    const res = await fetch(`https://fakestoreapi.com/products/1`); // fetch from api
+    const data = await res.json(); // parse json
+    setProduct(data); // set data to state
   }
 
   useEffect(() => {
     getProduct();
-  }, []);
+    console.log(product);
+  }, [product]);
 
   return (
     <div>
@@ -21,10 +31,9 @@ const Product = ({item}) => {
         <img className="w-64" src={product.image} alt={product.title} />
       </div>
       <p>$ {product.price}</p>
-      coupon shipping specs add to Cart combination
+      add to cart
       <p>{product.description}</p>
-      <p>review</p>
-      <p>QA</p>
+      <p>{product.rating.rate}</p>
       recommendation
     </div>
   );

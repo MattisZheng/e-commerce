@@ -12,7 +12,7 @@ const Home = () => {
         <a href="">Man's</a>
         <a href="">Women's</a>
       </div>
-      <Product />
+      <Product/>
     </div>
   );
 };
