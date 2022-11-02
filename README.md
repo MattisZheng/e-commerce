@@ -75,14 +75,16 @@ v0.0.0
 - [x] v0.02 Nav
 - [x] v0.03 API
 - [x] v0.04 Product page
-  - [x] Images
-  - [x] Description
 - [x] v0.05 Home page
 - [x] v0.06 Search bar
   - [x] Recommendation
   - [x] Categories
-- [ ] v0.07 Routing
-- [ ] v0.08 Cart
+- [ ] v.07 Search result page
+  - [ ] Sort
+  - [ ] Filter
+  - [ ] Pagination
+- [ ] v0.08 Routing
+- [ ] v0.09 Cart
   - [ ] Local Storage
 - [ ] v0.10 Unit Testing
 
