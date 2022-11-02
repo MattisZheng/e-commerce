@@ -1,10 +1,8 @@
 const Header = () => {
-  
-  
   return (
-    <div>
+    <header>
       <h1>
-      <a href=""></a>  Home
+        <a href="">Home</a>
       </h1>
       <div className="searchBox">
         <label htmlFor=""></label>
@@ -15,7 +13,7 @@ const Header = () => {
         <div>Cart</div>
         <div>Auth</div>
       </div>
-    </div>
+    </header>
   );
 };
 

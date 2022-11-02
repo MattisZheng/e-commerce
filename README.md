@@ -79,13 +79,14 @@ v0.0.0
 - [x] v0.06 Search bar
   - [x] Recommendation
   - [x] Categories
-- [ ] v.07 Search result page
+- [x] v.07 Search result page
   - [ ] Sort
+    - [ ] Price
+    - [ ] 
   - [ ] Filter
   - [ ] Pagination
 - [ ] v0.08 Routing
 - [ ] v0.09 Cart
-  - [ ] Local Storage
 - [ ] v0.10 Unit Testing
 
 v1.0.0 Main Site

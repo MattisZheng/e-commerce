@@ -1,4 +1,3 @@
-
 const Result = ({keyword}) => {
   const [results, setResults] = useState([]);
   

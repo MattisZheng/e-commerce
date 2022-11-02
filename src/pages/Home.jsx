@@ -1,18 +1,21 @@
 import Header from "../layouts/Header";
-import Product from "./Product";
+import Footer from "../layouts/Footer";
 
 const Home = () => {
   return (
     <div>
       <Header />
-      <div className="recommendation"></div>
-      <div className="categories">
-        <a href="">Electronics</a>
-        <a href="">Jewelry</a>
-        <a href="">Man's</a>
-        <a href="">Women's</a>
-      </div>
-      <Product item={1} />
+      <main>
+        <section>輪播圖</section>
+        <section>
+          <a href="">Electronics</a>
+          <a href="">Jewelry</a>
+          <a href="">Man's</a>
+          <a href="">Women's</a>
+        </section>
+        <section>熱銷</section>
+      </main>
+      <Footer />
     </div>
   );
 };
