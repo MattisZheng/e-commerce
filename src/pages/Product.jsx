@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import Item from "../components/Item";
+import Recommendation from "../components/Recommendation";
+
 
 const Product = ({ item }) => {
   const [product, setProduct] = useState({
@@ -38,6 +41,9 @@ const Product = ({ item }) => {
 
   return (
     <div>
+      <Header />
+      <Item item={product} />
+      <Recommendation recommendation={recommendation} />
       <h1>{product.title}</h1>
       <div className="container border-black">
         <img className="w-64" src={product.image} alt={product.title} />
