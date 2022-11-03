@@ -93,10 +93,10 @@ v0.0.0
   - [ ] Filter
   - [ ] Pagination
 - [ ] v0.08 Routing
-- [ ] v0.09 Cart
-  - [ ] Session storage
-- [ ] v0.10 Checkout
-- [ ] v0.10 Unit Testing
+- [ ] v0.09 Auth
+- [ ] v0.10 Cart
+- [ ] v0.11 Checkout
+- [ ] v0.12 Unit Testing
 
 v1.0.0 Main Site
 
