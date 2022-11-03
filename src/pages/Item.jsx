@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import Item from "../components/Item";
+import Product from "../components/Product";
 import Recommendation from "../components/Recommendation";
 import Header from "../layouts/Header";
 
-const Product = ({ item }) => {
+const Item = ({ item }) => {
   const [product, setProduct] = useState({
     id: 1,
     title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -71,4 +71,4 @@ const Product = ({ item }) => {
   );
 };
 
-export default Product;
+export default Item;

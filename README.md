@@ -25,7 +25,6 @@ npm install
 ```mermaid
 flowchart LR
 
-check_user --> |user exist| check_cart
 ```
 
 ### UI flow
@@ -35,24 +34,31 @@ flowchart LR
 
 app[App]
   header[Header]
-  home[Home Page]
-    swiper[Swiper]
-    category[Category]
-    popular[Popular]
-    sale[Sale]
-  search[Search Page]
-    result[Result]
-  item[Item Page]
-    product[Product]
-      recommendation[recommendation]
+    searchBox[Search]
+    auth[Auth]
+    cart[Cart]
+  main[Main]
+    home[Home Page]
+      swiper[Swiper]
+      category[Category]
+      popular[Popular]
+      sale[Sale]
+    search[Search Page]
+      result[Result]
+    item[Item Page]
+      product[Product]
+        recommendation[recommendation]
   footer[Footer]
 
-app --> home & search & item
+app --> header & home & search & item
+  header --> search & auth & cart
   home --> swiper & category & popular & sale
   search --> result
   item --> product --> recommendation
-
 ```
+
+````mermaid
+
 
 ### Data flow
 
@@ -64,7 +70,7 @@ user[User]
   cart[Cart]
 
 user --> accountInfo & cart
-```
+````
 
 ## Contribute guide
 
@@ -91,6 +97,8 @@ v0.0.0
   - [ ] Pagination
 - [ ] v0.08 Routing
 - [ ] v0.09 Cart
+  - [ ] Session storage
+- [ ] v0.10 Checkout
 - [ ] v0.10 Unit Testing
 
 v1.0.0 Main Site

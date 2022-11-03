@@ -1,4 +1,6 @@
-import Home from './pages/Home';
+import Home from "./pages/Home";
+import Product from "./pages/Item";
+import Search from "./pages/Search";
 
 function App() {
   return (

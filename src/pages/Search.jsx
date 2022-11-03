@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Result = ({ keyword }) => {
+const Search = ({ keyword }) => {
   const [results, setResults] = useState([]);
 
   async function getAllProducts() {
@@ -29,4 +29,4 @@ const Result = ({ keyword }) => {
   return <div>{data}</div>;
 };
 
-export default Result;
+export default Search;

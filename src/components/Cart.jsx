@@ -1,6 +1,12 @@
 const Cart = () => {
+  // get session storage
+  
+
   return (
-    <div>Cart</div>
+    <div>Cart
+      session storage
+      id:qty
+    </div>
   )
 }
 
