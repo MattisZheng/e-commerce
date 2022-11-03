@@ -79,10 +79,11 @@ v0.0.0
 - [x] v0.06 Search bar
   - [x] Recommendation
   - [x] Categories
-- [x] v.07 Search result page
+- [x] v0.07 Search result page
   - [ ] Sort
     - [ ] Price
-    - [ ] 
+    - [ ] Popularity
+    - [ ] Rating
   - [ ] Filter
   - [ ] Pagination
 - [ ] v0.08 Routing
@@ -93,9 +94,7 @@ v1.0.0 Main Site
 
 - [ ] v1.1 Web
 - [ ] v1.2 RWD
-- [ ] v1.3 Mobile
-- [ ] v1.4 PWA
-- [ ] v1.5 H5
+- [ ] v1.3 PWA
 
 v2.0.0 Cross-platform
 
