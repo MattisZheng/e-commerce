@@ -24,7 +24,7 @@ const Product = ({ item }) => {
       console.log(data);
       setProduct(data);
     } catch (err) {
-      console.error('err', err);
+      console.error("err", err);
     }
     // set data to state
   }
@@ -42,7 +42,7 @@ const Product = ({ item }) => {
       const data = await res.json(); // parse json
       setRecommendation(data); // set data to state
     } catch (err) {
-      console.error('err', err);
+      console.error("err", err);
     }
   }
 
@@ -65,9 +65,7 @@ const Product = ({ item }) => {
       <p>{product.rating.rate}</p>
       <p>{product.rating.count}</p>
       <div>
-        <div>
-          <h2>Recommendation</h2>
-        </div>
+        <div>recommendation</div>
       </div>
     </div>
   );

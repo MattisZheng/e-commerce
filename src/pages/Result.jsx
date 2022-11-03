@@ -14,15 +14,15 @@ const Result = ({ keyword }) => {
   }
 
   async function getResults(keyword) {
-    try {
-    }
-    catch (err) {
-      console.err("err", err);
-    }
+    results.filter((result) => {
+      if (result.title.includes(keyword)) {
+        return result;
+      }
+    });
   }
 
   useEffect(() => {
-    getResults(keyword);
+    getAllProducts(keyword);
     console.log("getResults");
   }, []);
 
