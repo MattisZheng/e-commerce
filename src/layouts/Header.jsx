@@ -1,3 +1,5 @@
+import Cart from "../components/Cart";
+
 const Header = () => {
   return (
     <header>
@@ -10,8 +12,7 @@ const Header = () => {
         <button>Search</button>
       </div>
       <div>
-        <div>Cart</div>
-        <div>Auth</div>
+        <Cart/>
       </div>
     </header>
   );

@@ -53,7 +53,7 @@ const Item = ({ item }) => {
   }, [product]);
 
   return (
-    <div>
+    <div className="border-2">
       <Header />
       <h1>{product.title}</h1>
       <div className="container border-black">

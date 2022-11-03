@@ -26,7 +26,7 @@ const Search = ({ keyword }) => {
     });
   }
 
-  return <div>{data}</div>;
+  return <div className="border-2">{results}</div>;
 };
 
 export default Search;
