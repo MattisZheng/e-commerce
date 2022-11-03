@@ -13,6 +13,11 @@ const Result = ({ keyword }) => {
     }
   }
 
+  useEffect(() => {
+    getAllProducts(keyword);
+    console.log("getResults");
+  }, []);
+
   async function getResults(keyword) {
     results.filter((result) => {
       if (result.title.includes(keyword)) {
@@ -20,11 +25,6 @@ const Result = ({ keyword }) => {
       }
     });
   }
-
-  useEffect(() => {
-    getAllProducts(keyword);
-    console.log("getResults");
-  }, []);
 
   return <div>{data}</div>;
 };

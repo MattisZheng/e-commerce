@@ -6,9 +6,8 @@
 
 - React
 - Stripe.js
-- Axios
 - Tailwind
-- Testing Library
+- Jest
 
 ## Usage
 
@@ -34,21 +33,24 @@ check_user --> |user exist| check_cart
 ```mermaid
 flowchart LR
 
-home[Home Page]
-  search[Search Box]
-  recommendation[Recommendation]
-result[Search Result]
-  sort[Sort]
-  product[Product]
-productPage[Product Page]
-  product[Product]
+app[App]
+  header[Header]
+  home[Home Page]
+    swiper[Swiper]
+    recommendation[Recommendation]
+    category[Category]
+    popular[Popular]
+    sale[Sale]
+  search[Search Page]
+    result
+  item[Item Page]
+  footer[Footer]
 
-home --> search & recommendation
-result --> sort & product
-productPage --> product
+app --> home & result & item
+  home --> search & recommendation
+  result --> sort & item
+  item --> product
 ```
-
-home --> search & recommendation
 
 ### Data flow
 
@@ -58,9 +60,8 @@ flowchart LR
 user[User]
   accountInfo[Account Info]
   cart[Cart]
-  searchHistory[Search History]
 
-user --> accountInfo & cart & searchHistory
+user --> accountInfo & cart
 ```
 
 ## Contribute guide
