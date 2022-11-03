@@ -37,19 +37,21 @@ app[App]
   header[Header]
   home[Home Page]
     swiper[Swiper]
-    recommendation[Recommendation]
     category[Category]
     popular[Popular]
     sale[Sale]
   search[Search Page]
-    result
+    result[Result]
   item[Item Page]
+    product[Product]
+      recommendation[recommendation]
   footer[Footer]
 
-app --> home & result & item
-  home --> search & recommendation
-  result --> sort & item
-  item --> product
+app --> home & search & item
+  home --> swiper & category & popular & sale
+  search --> result
+  item --> product --> recommendation
+
 ```
 
 ### Data flow
