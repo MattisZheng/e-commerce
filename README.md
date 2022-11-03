@@ -6,9 +6,8 @@
 
 - React
 - Stripe.js
-- Axios
 - Tailwind
-- Testing Library
+- Jest
 
 ## Usage
 
@@ -26,7 +25,6 @@ npm install
 ```mermaid
 flowchart LR
 
-check_user --> |user exist| check_cart
 ```
 
 ### UI flow
@@ -34,21 +32,33 @@ check_user --> |user exist| check_cart
 ```mermaid
 flowchart LR
 
-home[Home Page]
-  search[Search Box]
-  recommendation[Recommendation]
-result[Search Result]
-  sort[Sort]
-  product[Product]
-productPage[Product Page]
-  product[Product]
+app[App]
+  header[Header]
+    searchBox[Search]
+    auth[Auth]
+    cart[Cart]
+  main[Main]
+    home[Home Page]
+      swiper[Swiper]
+      category[Category]
+      popular[Popular]
+      sale[Sale]
+    search[Search Page]
+      result[Result]
+    item[Item Page]
+      product[Product]
+        recommendation[recommendation]
+  footer[Footer]
 
-home --> search & recommendation
-result --> sort & product
-productPage --> product
+app --> header & home & search & item
+  header --> search & auth & cart
+  home --> swiper & category & popular & sale
+  search --> result
+  item --> product --> recommendation
 ```
 
-home --> search & recommendation
+````mermaid
+
 
 ### Data flow
 
@@ -58,10 +68,9 @@ flowchart LR
 user[User]
   accountInfo[Account Info]
   cart[Cart]
-  searchHistory[Search History]
 
-user --> accountInfo & cart & searchHistory
-```
+user --> accountInfo & cart
+````
 
 ## Contribute guide
 
@@ -79,23 +88,24 @@ v0.0.0
 - [x] v0.06 Search bar
   - [x] Recommendation
   - [x] Categories
-- [x] v.07 Search result page
+- [x] v0.07 Search result page
   - [ ] Sort
     - [ ] Price
-    - [ ] 
+    - [ ] Popularity
+    - [ ] Rating
   - [ ] Filter
   - [ ] Pagination
 - [ ] v0.08 Routing
 - [ ] v0.09 Cart
+  - [ ] Session storage
+- [ ] v0.10 Checkout
 - [ ] v0.10 Unit Testing
 
 v1.0.0 Main Site
 
 - [ ] v1.1 Web
 - [ ] v1.2 RWD
-- [ ] v1.3 Mobile
-- [ ] v1.4 PWA
-- [ ] v1.5 H5
+- [ ] v1.3 PWA
 
 v2.0.0 Cross-platform
 

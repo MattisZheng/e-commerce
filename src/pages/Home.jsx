@@ -1,25 +1,20 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import Header from "../layouts/Header";
-import Footer from "../layouts/Footer";
+import Category from "../components/Category";
 import Sale from "../components/Sale";
-import Product from "./Product";
+import Footer from "../layouts/Footer";
 
 import "swiper/css";
 
 const Home = () => {
   return (
-    <div>
+    <div className="border-2">
       <Header />
       <main>
         <section>Swiper</section>
-        <section>
-          <a href="">Electronics</a>
-          <a href="">Jewelry</a>
-          <a href="">Man's</a>
-          <a href="">Women's</a>
-        </section>
-        <Product item={1} />
-        <section></section>
+       
+        
+        <Sale />
       </main>
       <Footer />
     </div>

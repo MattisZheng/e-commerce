@@ -1,7 +1,7 @@
 const Cart = () => {
-  return (
-    <div>Cart</div>
-  )
-}
+  // get session storage
 
-export default Cart
+  return <div>Cart session storage id:qty</div>;
+};
+
+export default Cart;

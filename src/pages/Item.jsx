@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import Item from "../components/Item";
+import Product from "../components/Product";
 import Recommendation from "../components/Recommendation";
 import Header from "../layouts/Header";
 
-const Product = ({ item }) => {
+const Item = ({ item }) => {
   const [product, setProduct] = useState({
     id: 1,
     title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -23,8 +23,8 @@ const Product = ({ item }) => {
       const data = await res.json(); // parse json
       console.log(data);
       setProduct(data);
-    } catch (error) {
-      console.error(error);
+    } catch (err) {
+      console.error("err", err);
     }
     // set data to state
   }
@@ -41,8 +41,8 @@ const Product = ({ item }) => {
       const res = await fetch(`https://fakestoreapi.com/products/category/${category}`); // fetch from api
       const data = await res.json(); // parse json
       setRecommendation(data); // set data to state
-    } catch (error) {
-      console.error(error);
+    } catch (err) {
+      console.error("err", err);
     }
   }
 
@@ -53,7 +53,7 @@ const Product = ({ item }) => {
   }, [product]);
 
   return (
-    <div>
+    <div className="border-2">
       <Header />
       <h1>{product.title}</h1>
       <div className="container border-black">
@@ -65,17 +65,10 @@ const Product = ({ item }) => {
       <p>{product.rating.rate}</p>
       <p>{product.rating.count}</p>
       <div>
-        <div>
-          <h2>Recommendation</h2>
-          <div className="container border-black">
-            {recommendation.map((item) => (
-              <img className="w-64" src={item.image} alt={product.title} />
-            ))}
-          </div>
-        </div>
+        <div>recommendation</div>
       </div>
     </div>
   );
 };
 
-export default Product;
+export default Item;
