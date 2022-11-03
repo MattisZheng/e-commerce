@@ -57,9 +57,6 @@ app --> header & home & search & item
   item --> product --> recommendation
 ```
 
-````mermaid
-
-
 ### Data flow
 
 ```mermaid
@@ -70,7 +67,7 @@ user[User]
   cart[Cart]
 
 user --> accountInfo & cart
-````
+```
 
 ## Contribute guide
 
