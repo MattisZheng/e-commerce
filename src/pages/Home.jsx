@@ -8,6 +8,7 @@ import "swiper/css";
 const Home = () => {
   return (
     <main>
+      <Recommendation />
       <Category />
       <Popular />
       <Sale />

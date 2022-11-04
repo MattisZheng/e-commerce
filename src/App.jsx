@@ -12,7 +12,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/item/:id" element={<Item item={1} />} />
+          <Route path="/item/:id" element={<Item/>} />
           <Route path="/search" element={<Search keyword={"bag"} />} />
         </Routes>
         <Footer />
