@@ -1,5 +1,5 @@
 const Cart = () => {
-  return <div>Cart session storage id:qty</div>;
+  return <div>Cart</div>;
 };
 
 export default Cart;
