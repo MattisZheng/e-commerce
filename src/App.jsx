@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/item/:id" element={<Item/>} />
-          <Route path="/search" element={<Search keyword={"bag"} />} />
+          <Route path="/search/:keyword" element={<Search/>} />
         </Routes>
         <Footer />
       </Router>
