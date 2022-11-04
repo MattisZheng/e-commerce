@@ -91,7 +91,6 @@ v0.0.0
     - [ ] Popularity
     - [ ] Rating
   - [ ] Filter
-  - [ ] Pagination
 - [x] v0.08 Routing
 - [x] v0.09 Auth
 - [x] v0.10 Cart

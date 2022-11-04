@@ -8,8 +8,8 @@ const Sale = () => {
       const res = await fetch("https://fakestoreapi.com/products?limit=5");
       const data = await res.json();
       setSale(data);
-    } catch (err) {
-      console.error(err);
+    } catch (error) {
+      console.error(error);
     }
   }
 

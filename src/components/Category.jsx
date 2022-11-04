@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 const Category = () => {
   return (
     <section>
-      <a href="">Electronics</a>
-      <a href="">Jewelry</a>
-      <a href="">Man's</a>
-      <a href="">Women's</a>
+      <Link to="/search/electronics">Electronics</Link>
+      <Link>Jewelry</Link>
+      <Link>Man's</Link>
+      <Link>Women's</Link>
     </section>
   );
 };

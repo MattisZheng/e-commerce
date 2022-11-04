@@ -47,7 +47,7 @@ const Item = ({ item }) => {
 
   useEffect(() => {
     getRecommendation(product.category);
-    console.log("getRecommendation");
+    console.log("getRecommendation"); 
     console.log(recommendation);
   }, [product]);
 
