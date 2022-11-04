@@ -1,13 +1,8 @@
-import { data } from "autoprefixer"
-import { getAllProduct } from "../utils/getAllProduct"
+import { Swiper, SwiperSlide } from "swiper/react";
+import { getAllProduct } from "../utils/getAllProduct";
 
 const Recommendation = () => {
-  getAllProduct()
-  console.log(data)
-  
-  return (
-    <div>Recommendation</div>
-  )
-}
+  return <div>Recommendation</div>;
+};
 
-export default Recommendation
+export default Recommendation;

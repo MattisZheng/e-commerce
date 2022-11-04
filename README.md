@@ -92,11 +92,10 @@ v0.0.0
     - [ ] Rating
   - [ ] Filter
   - [ ] Pagination
-- [ ] v0.08 Routing
-- [ ] v0.09 Cart
-  - [ ] Session storage
-- [ ] v0.10 Checkout
-- [ ] v0.10 Unit Testing
+- [x] v0.08 Routing
+- [x] v0.09 Auth
+- [x] v0.10 Cart
+- [ ] v0.12 Unit Testing
 
 v1.0.0 Main Site
 
@@ -105,5 +104,3 @@ v1.0.0 Main Site
 - [ ] v1.3 PWA
 
 v2.0.0 Cross-platform
-
-v3.0.0 Back-end

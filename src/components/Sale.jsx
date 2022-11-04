@@ -17,7 +17,7 @@ const Sale = () => {
     getSale();
   }, []);
 
-  return <div></div>;
+  return <div>sale</div>;
 };
 
 export default Sale;

@@ -1,15 +1,21 @@
-import Cart from "../components/Cart";
+import SearchBox from "../components/SearchBox";
 import Auth from "../components/Auth";
+import Cart from "../components/Cart";
 
-const Header = () => {
+const Header = ({token}) => {
   return (
-    <header>
-      <h1>
-        <a href="">Home</a>
-      </h1>
-      
+    <header className="flex">
       <div>
-        <Cart/>
+        <h1>
+          <a href="/">Home</a>
+        </h1>
+      </div>
+      <div>
+        <SearchBox />
+      </div>
+      <div>
+        <Auth token={token} />
+        <Cart />
       </div>
     </header>
   );

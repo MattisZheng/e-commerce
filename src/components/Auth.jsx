@@ -1,5 +1,5 @@
-const Auth = () => {
-  return <div>Auth</div>;
+const Auth = ({ token }) => {
+  return <div>Auth{token}</div>;
 };
 
 export default Auth;

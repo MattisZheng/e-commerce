@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Product from "../components/Product";
 import Recommendation from "../components/Recommendation";
-import Header from "../layouts/Header";
 
 const Item = ({ item }) => {
   const [product, setProduct] = useState({
@@ -41,8 +40,8 @@ const Item = ({ item }) => {
       const res = await fetch(`https://fakestoreapi.com/products/category/${category}`); // fetch from api
       const data = await res.json(); // parse json
       setRecommendation(data); // set data to state
-    } catch (err) {
-      console.error("err", err);
+    } catch (error) {
+      console.error("error", error);
     }
   }
 
@@ -53,8 +52,7 @@ const Item = ({ item }) => {
   }, [product]);
 
   return (
-    <div className="border-2">
-      <Header />
+    <main>
       <h1>{product.title}</h1>
       <div className="container border-black">
         <img className="w-64" src={product.image} alt={product.title} />
@@ -67,7 +65,7 @@ const Item = ({ item }) => {
       <div>
         <div>recommendation</div>
       </div>
-    </div>
+    </main>
   );
 };
 
