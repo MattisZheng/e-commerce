@@ -86,11 +86,10 @@ v0.0.0
   - [x] Recommendation
   - [x] Categories
 - [x] v0.07 Search result page
-  - [ ] Sort
-    - [ ] Price
-    - [ ] Popularity
-    - [ ] Rating
-  - [ ] Filter
+  - [x] Sort
+    - [x] Price
+    - [x] Popularity
+    - [x] Rating
 - [x] v0.08 Routing
 - [x] v0.09 Auth
 - [x] v0.10 Cart
