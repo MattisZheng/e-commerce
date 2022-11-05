@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import SearchBox from "../components/SearchBox";
 import Auth from "../components/Auth";
 import Cart from "../components/Cart";
@@ -7,7 +9,7 @@ const Header = ({token}) => {
     <header className="flex">
       <div>
         <h1>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </h1>
       </div>
       <div>

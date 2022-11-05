@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Product from "../components/Product";
 import Recommendation from "../components/Recommendation";
 
-const Item = ({ item }) => {
+const Item = () => {
+  let { id } = useParams();
+
   const [product, setProduct] = useState({
     id: 1,
     title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -16,40 +19,20 @@ const Item = ({ item }) => {
     },
   });
 
-  async function getItem(item) {
+  async function getItem(id) {
+    const res = await fetch(`https://fakestoreapi.com/products/${id}`); // fetch from api
     try {
-      const res = await fetch(`https://fakestoreapi.com/products/${item}`); // fetch from api
       const data = await res.json(); // parse json
-      console.log(data);
       setProduct(data);
-    } catch (err) {
-      console.error("err", err);
+    } catch (error) {
+      console.error(error);
     }
     // set data to state
   }
 
   useEffect(() => {
-    getItem(item);
-    console.log("getItem");
+    getItem(id);
   }, []);
-
-  const [recommendation, setRecommendation] = useState([]);
-
-  async function getRecommendation(category) {
-    try {
-      const res = await fetch(`https://fakestoreapi.com/products/category/${category}`); // fetch from api
-      const data = await res.json(); // parse json
-      setRecommendation(data); // set data to state
-    } catch (error) {
-      console.error("error", error);
-    }
-  }
-
-  useEffect(() => {
-    getRecommendation(product.category);
-    console.log("getRecommendation");
-    console.log(recommendation);
-  }, [product]);
 
   return (
     <main>

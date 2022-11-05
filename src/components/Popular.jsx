@@ -1,11 +1,29 @@
 import { useState, useEffect } from "react";
+import getAllProduct from "../utils/getAllProduct";
+import Preview from "./Preview";
 
 const Popular = () => {
   const [popular, setPopular] = useState([]);
 
-  async function getPopular() {}
+  async function getPopular() {
+    // get all products
+    const allProduct = await getAllProduct();
+    // filter top 5 most popular products
+    setPopular(allProduct.sort((a, b) => b.rating.count - a.rating.count).slice(0, 5));
+  }
 
-  return <div>Hot</div>;
+  useEffect(() => {
+    getPopular();
+  }, []);
+
+  return (
+    <div>
+      <h2>popular</h2>
+      {popular.map((item) => {
+        return <Preview id={item.id} title={item.title} price={item.price} image={item.image} rating={item.rating} />;
+      })}
+    </div>
+  );
 };
 
 export default Popular;

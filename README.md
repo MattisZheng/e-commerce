@@ -86,12 +86,10 @@ v0.0.0
   - [x] Recommendation
   - [x] Categories
 - [x] v0.07 Search result page
-  - [ ] Sort
-    - [ ] Price
-    - [ ] Popularity
-    - [ ] Rating
-  - [ ] Filter
-  - [ ] Pagination
+  - [x] Sort
+    - [x] Price
+    - [x] Popularity
+    - [x] Rating
 - [x] v0.08 Routing
 - [x] v0.09 Auth
 - [x] v0.10 Cart
@@ -104,3 +102,7 @@ v1.0.0 Main Site
 - [ ] v1.3 PWA
 
 v2.0.0 Cross-platform
+
+- 
+
+v3.0.0 User Experienec
