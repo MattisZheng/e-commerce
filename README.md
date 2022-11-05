@@ -97,12 +97,21 @@ v0.0.0
 
 v1.0.0 Main Site
 
-- [ ] v1.1 Web
-- [ ] v1.2 RWD
-- [ ] v1.3 PWA
+- [ ] v1.01 Web
+- [ ] v1.02 RWD
+- [ ] v1.03 PWA
 
 v2.0.0 Cross-platform
 
-- 
+- [ ] v2.01 searching algorithm
+  - [ ] history
+  - [ ] keyword
+    - [ ] category
+    - [ ] title
+    - [ ] filter
+- [ ] v2.02 lazy load
+- [ ] v2.03 cart
+  - [ ] modal
+  - [ ] search
 
-v3.0.0 User Experienec
+v3.0.0 User Experience
