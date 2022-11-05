@@ -7,13 +7,13 @@ import Search from "./pages/Search";
 
 function App() {
   return (
-    <div className="">
+    <div>
       <BrowserRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/item/:id" element={<Item/>} />
-          <Route path="/search/:keyword" element={<Search/>} />
+          <Route path="/item/:id" element={<Item />} />
+          <Route path="/search/:keyword" element={<Search />} />
         </Routes>
         <Footer />
       </BrowserRouter>

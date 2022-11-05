@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 const Preview = ({ id, title, price, image, rating }) => {
   return (
     <div>
