@@ -5,9 +5,9 @@
 ## Build with
 
 - React
-- Stripe.js
+- Fake Store API (https://fakestoreapi.com/)
 - Tailwind
-- Jest
+- Vitest
 
 ## Usage
 
@@ -24,6 +24,12 @@ npm install
 
 ```mermaid
 flowchart LR
+
+auth
+api
+token
+localstorage
+cart
 
 ```
 
@@ -93,7 +99,7 @@ v0.0.0
 - [x] v0.08 Routing
 - [x] v0.09 Auth
 - [x] v0.10 Cart
-- [ ] v0.12 Unit Testing
+- [x] v0.12 Unit Testing
 
 v1.0.0 Main Site
 
@@ -113,5 +119,6 @@ v2.0.0 Cross-platform
 - [ ] v2.03 cart
   - [ ] modal
   - [ ] search
+- [ ] debounce & throttle
 
 v3.0.0 User Experience
