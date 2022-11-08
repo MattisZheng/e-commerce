@@ -1,4 +1,4 @@
-// return n random numbers for given array
+// return n random for given array
 
 export default function getRandomFromArray(n: number, arr: number[]): number[] {
   let generated: number[] = [];

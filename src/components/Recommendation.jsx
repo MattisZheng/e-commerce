@@ -1,5 +1,6 @@
 import { useState } from "react";
 import getAllProduct from "../utils/getAllProduct";
+import getRandomFromArray from "../utils/getRandomFromArray";
 
 const Recommendation = () => {
   const [recommendation, setRecommendation] = useState([]);
@@ -8,12 +9,10 @@ const Recommendation = () => {
     // get all products
     const allProduct = await getAllProduct();
     // randomly select 6 products
-    setRecommendation(allProduct);
+    setRecommendation(getRandomFromArray(6, allProduct));
   }
 
-
-  
-  return <div>Recommendation</div>;
+  return <div>{recommendation}</div>;
 };
 
 export default Recommendation;

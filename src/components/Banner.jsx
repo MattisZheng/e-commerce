@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import getAllProduct from "../utils/getAllProduct";
+import getRandomFromArray from "../utils/getRandomFromArray";
 import Preview from "./Preview";
 
 const Banner = () => {
@@ -10,11 +11,7 @@ const Banner = () => {
     // get all products
     const allProduct = await getAllProduct();
     // randomly select 6 products from all products
-    console.log(allProduct.length);
-    for (let i = 0; i < 6; i++) {
-      let random = Math.floor(Math.random() * allProduct.length);
-      setBanner((prev) => [...prev, allProduct[random]]);
-    }
+    setBanner(getRandomFromArray(6, allProduct));
   }
 
   useEffect(() => {
