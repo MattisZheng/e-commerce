@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import getAllProduct from "../utils/getAllProduct";
 import Preview from "./Preview";
 
-export default function SearchResult({ keyword }) {
+function SearchResult({ keyword }) {
   const [searchResult, setSearchResult] = useState([]);
   const [sortingMethod, setSortingMethod] = useState("relevant");
 
@@ -13,11 +13,18 @@ export default function SearchResult({ keyword }) {
     // get filtered products
     async function filterResults(allProduct) {
       let filteredResults = [];
-      // by title
-      filteredResults = allProduct;
-      // by description
-
+      // filter by title
+      filteredResults = allProduct.filter((item) => {
+        return item.title.toLowerCase().includes(keyword.toLowerCase());
+      });
+      // filter other by description
+      filteredResults = allProduct.filter((item) => {
+        return item.description.toLowerCase().includes(keyword.toLowerCase());
+      });
       // by category
+      filteredResults = allProduct.filter((item) => {
+        return item.category.toLowerCase().includes(keyword.toLowerCase());
+      });
 
       return filteredResults;
     }
@@ -61,13 +68,13 @@ export default function SearchResult({ keyword }) {
   return (
     <div>
       <div>
-      <label htmlFor="method">sort by</label>
-      <select name="method" id="" onChange={handleChange}>
-        <option value="relevant">relevance</option>
-        <option value="price-high-low">high</option>
-        <option value="price-low-high">low</option>
-        <option value="rating">rating</option>
-      </select>
+        <label htmlFor="method">sort by</label>
+        <select name="method" id="" onChange={handleChange}>
+          <option value="relevant">relevance</option>
+          <option value="price-high-low">high</option>
+          <option value="price-low-high">low</option>
+          <option value="rating">rating</option>
+        </select>
       </div>
       <div className="grid grid-cols-3">
         {
@@ -75,15 +82,17 @@ export default function SearchResult({ keyword }) {
           searchResult
             ? searchResult.map((item) => {
                 return (
-                  <Preview
-                    key={item.id}
-                    id={item.id}
-                    title={item.title}
-                    price={item.price}
-                    image={item.image}
-                    rating={item.rating}
-                    className="text-gray-300"
-                  />
+                  <div key={item.id}>
+                    <Preview
+                      id={item.id}
+                      title={item.title}
+                      price={item.price}
+                      image={item.image}
+                      rate={item.rating.rate}
+                      count={item.rating.count}
+                      className="text-gray-300"
+                    />
+                  </div>
                 );
               })
             : "no result found"
@@ -92,3 +101,5 @@ export default function SearchResult({ keyword }) {
     </div>
   );
 }
+
+export default SearchResult;
