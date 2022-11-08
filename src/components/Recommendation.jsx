@@ -1,9 +1,19 @@
-import React from 'react'
+import { useState } from "react";
+import getAllProduct from "../utils/getAllProduct";
 
 const Recommendation = () => {
-  return (
-    <div>Recommendation</div>
-  )
-}
+  const [recommendation, setRecommendation] = useState([]);
 
-export default Recommendation
+  async function getRecommendation() {
+    // get all products
+    const allProduct = await getAllProduct();
+    // randomly select 6 products
+    setRecommendation(allProduct);
+  }
+
+
+  
+  return <div>Recommendation</div>;
+};
+
+export default Recommendation;

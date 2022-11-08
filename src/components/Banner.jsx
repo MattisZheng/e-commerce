@@ -4,23 +4,27 @@ import getAllProduct from "../utils/getAllProduct";
 import Preview from "./Preview";
 
 const Banner = () => {
-  const [recommendation, setRecommendation] = useState([]);
+  const [banner, setBanner] = useState([]);
 
-  async function getRecommendation() {
+  async function getBanner() {
     // get all products
     const allProduct = await getAllProduct();
-    // randomly select 6 products
-    setRecommendation(allProduct);
+    // randomly select 6 products from all products
+    console.log(allProduct.length);
+    for (let i = 0; i < 6; i++) {
+      let random = Math.floor(Math.random() * allProduct.length);
+      setBanner((prev) => [...prev, allProduct[random]]);
+    }
   }
 
   useEffect(() => {
-    getRecommendation();
+    getBanner();
   }, []);
 
   return (
     <div>
       <Swiper spaceBetween={50} slidesPerView={3}>
-        {recommendation.map((item) => {
+        {banner.map((item) => {
           return (
             <SwiperSlide key={item.id}>
               <Preview id={item.id} title={item.title} price={item.price} image={item.image} rating={item.rating} />
