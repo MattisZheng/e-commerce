@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-const Preview = ({ id, title, price, image, rating }) => {
+const Preview = ({ id, title, price, image, rating, className }) => {
   return (
-    <div>
+    <div className={className}>
       <Link to={`/item/${id}`}>
         <img src={image} alt={title} />
         <p>{title}</p>

@@ -3,12 +3,12 @@ import { useState, useEffect } from "react";
 const SearchBox = () => {
   const [keyword, setKeyword] = useState("");
 
-  const handleChange = (e) => {
+  function handleChange(e) {
     setKeyword(e.target.value);
-  };
+  }
 
   // go to url with keyword
-  const handleSubmit = (e) => {
+  function handleSubmit(e) {
     e.preventDefault();
     location.href = `/search/${keyword}`;
   };
@@ -16,7 +16,7 @@ const SearchBox = () => {
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="keyword"></label>
-      <input type="text" id="keyword" onChange={handleChange} />
+      <input type="text" id="keyword" placeholder="search" autoComplete="off" onChange={handleChange} />
       <button>Search</button>
     </form>
   );
