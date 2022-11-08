@@ -16,7 +16,7 @@ const SearchBox = () => {
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="keyword"></label>
-      <input type="text" id="keyword" onChange={handleChange}/>
+      <input type="text" id="keyword" onChange={handleChange} />
       <button>Search</button>
     </form>
   );

@@ -1,23 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Product from "../components/Product";
-import Recommendation from "../components/Recommendation";
+import Recommendation from "../components/Banner";
 
 const Item = () => {
   let { id } = useParams();
 
-  const [product, setProduct] = useState({
-    id: 1,
-    title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-    price: 109.95,
-    description: "",
-    category: "",
-    image: "",
-    rating: {
-      rate: 4.5,
-      count: 120,
-    },
-  });
+  const [product, setProduct] = useState({});
 
   async function getItem(id) {
     const res = await fetch(`https://fakestoreapi.com/products/${id}`); // fetch from api
@@ -36,6 +25,7 @@ const Item = () => {
 
   return (
     <main>
+      <Product />
       <h1>{product.title}</h1>
       <div className="container border-black">
         <img className="w-64" src={product.image} alt={product.title} />
@@ -43,8 +33,8 @@ const Item = () => {
       <p>$ {product.price}</p>
       add to cart
       <p>{product.description}</p>
-      <p>{product.rating.rate}</p>
-      <p>{product.rating.count}</p>
+      <p>{product.rating ? product.rating.rate : ""}</p>
+      <p>{product.rating ? product.rating.count : ""}</p>
       <div>
         <div>recommendation</div>
       </div>

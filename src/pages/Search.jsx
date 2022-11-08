@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import getAllProduct from "../utils/getAllProduct";
 import Preview from "../components/Preview";
-import Recommendation from "../components/Recommendation";
+import Recommendation from "../components/Banner";
 
 const Search = () => {
   const { keyword } = useParams();
@@ -22,13 +22,10 @@ const Search = () => {
   }
 
   async function sortResults(allProduct, method) {
-    
-
     switch (method) {
       case "relevant":
       case "price":
       case "rating":
-
     }
     // sort by relevance (default)
     // sort by price (low to high)
