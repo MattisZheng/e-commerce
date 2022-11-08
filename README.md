@@ -109,8 +109,9 @@ v1.0.0 Main Site
 
 v2.0.0 Cross-platform
 
-- [ ] v2.01 searching algorithm
+- [ ] v2.01 searching methods
   - [ ] history
+  - [ ] autocomplete
   - [ ] keyword
     - [ ] category
     - [ ] title

@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 const Auth = () => {
   // set token to session storage
   const [token, setToken] = useState(sessionStorage.getItem("token") ? sessionStorage.getItem("token") : sessionStorage.setItem("token", ""));
-
   const [isLoggedIn, In] = useState(false);
 
   async function checkToken() {

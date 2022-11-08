@@ -4,6 +4,10 @@ import {useState, useEffect} from "react";
 
 const Cart = () => {
 
+  // cart icon
+
+  // cart modal
+
   async function getCart() {
     // get cart from local storage
     // if cart is empty, show "cart is empty"
