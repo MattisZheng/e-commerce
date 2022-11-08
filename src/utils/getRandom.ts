@@ -1,15 +1,12 @@
-// return n random number for given array without duplicates
+// return n random numbers for given array
 
-export default function getRandom(n: number, arr: number[]) {
-  let random: number[] = [];
+export default function getRandomFromArray(n: number, arr: number[]): number[] {
+  let generated: number[] = [];
 
-  // for loop?
-
-  while (arr.length < n) {
-    let r = Math.floor(Math.random() * arr.length);
-    if (arr.indexOf(r) === -1) arr.push(r);
+  while (generated.length < n) {
+    let pointer = Math.floor(Math.random() * arr.length);
+    generated.push(arr[pointer]);
+    arr.splice(pointer, 1);
   }
-  return random;
+  return generated;
 }
-
-console.log(getRandom(1, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // 1
