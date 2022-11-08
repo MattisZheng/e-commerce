@@ -1,14 +1,13 @@
-import Recommendation from "../components/Recommendation";
+import Banner from "../components/Banner";
 import Category from "../components/Category";
 import Popular from "../components/Popular";
 import Sale from "../components/Sale";
-
 import "swiper/css";
 
 const Home = () => {
   return (
     <main>
-      <Recommendation />
+      <Banner />
       <Category />
       <Popular />
       <Sale />

@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useState } from "react";
 import getAllProduct from "../utils/getAllProduct";
-import Preview from "./Preview";
+import getRandomFromArray from "../utils/getRandomFromArray";
 
 const Recommendation = () => {
   const [recommendation, setRecommendation] = useState([]);
@@ -10,26 +9,10 @@ const Recommendation = () => {
     // get all products
     const allProduct = await getAllProduct();
     // randomly select 6 products
-    setRecommendation(allProduct);
+    setRecommendation(getRandomFromArray(6, allProduct));
   }
 
-  useEffect(() => {
-    getRecommendation();
-  }, []);
-
-  return (
-    <div>
-      <Swiper spaceBetween={50} slidesPerView={3}>
-        {recommendation.map((item) => {
-          return (
-            <SwiperSlide key={item.id}>
-              <Preview id={item.id} title={item.title} price={item.price} image={item.image} rating={item.rating} />
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
-    </div>
-  );
+  return <div>{recommendation}</div>;
 };
 
 export default Recommendation;

@@ -2,26 +2,34 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import getAllProduct from "../utils/getAllProduct";
 import Preview from "../components/Preview";
-import Recommendation from "../components/Recommendation";
+import Recommendation from "../components/Banner";
 
 const Search = () => {
   const { keyword } = useParams();
 
+  const [searchResult, setSearchResult] = useState([]);
   const [sortingMethod, setSortingMethod] = useState("relevant");
 
   async function gerResults() {
+    // get all products
     const allProduct = await getAllProduct();
-    console.log(allProduct);
+
     // filter
-    sortResults(allProduct, sortingMethod);
-    // title
     // description
+    // title
     // category
+    sortResults(allProduct, sortingMethod);
   }
 
   async function sortResults(allProduct, method) {
+    switch (method) {
+      case "relevant":
+      case "price":
+      case "rating":
+    }
     // sort by relevance (default)
-    // sort by price
+    // sort by price (low to high)
+    // sort by price (high to low)
     // sort by rate
     // sort by count
     // if result is empty, show "no result found"
@@ -33,8 +41,8 @@ const Search = () => {
 
   return (
     <main>
-      search
-      <p>{keyword}</p>
+      <p>ui for method</p>
+      <p>{searchResult}</p>
       <Recommendation />
     </main>
   );

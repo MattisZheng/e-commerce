@@ -1,19 +1,24 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import SearchBox from "../components/SearchBox";
+import Recommendation from "../components/Recommendation";
 import Auth from "../components/Auth";
 import Cart from "../components/Cart";
 
-const Header = ({token}) => {
+const Header = () => {
+  const [token, setToken] = useState(sessionStorage.getItem("token") ? sessionStorage.getItem("token") : sessionStorage.setItem("token", ""));
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
-    <header className="flex">
+    <header className="flex h-24 bg-slate-500">
       <div>
-        <h1>
-          <Link to="/">Home</Link>
-        </h1>
+        <Link to="/">Logo</Link>
       </div>
       <div>
         <SearchBox />
+        <Recommendation />
       </div>
       <div>
         <Auth token={token} />
