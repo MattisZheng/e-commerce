@@ -25,11 +25,12 @@ npm install
 ```mermaid
 flowchart LR
 
-auth
-api
+auth[Auth]
 token
 localstorage
 cart
+
+
 
 ```
 

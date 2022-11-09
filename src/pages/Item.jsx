@@ -8,6 +8,7 @@ const Item = () => {
 
   const [product, setProduct] = useState({});
 
+  // fetch product data from API
   async function getItem(id) {
     const res = await fetch(`https://fakestoreapi.com/products/${id}`); // fetch from api
     try {

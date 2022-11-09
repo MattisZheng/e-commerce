@@ -9,7 +9,6 @@ function SearchResult({ keyword }) {
   async function gerResults() {
     // get all products
     const allProduct = await getAllProduct();
-
     // get filtered products
     async function filterResults(allProduct) {
       let filteredResults = [];
@@ -17,15 +16,6 @@ function SearchResult({ keyword }) {
       filteredResults = allProduct.filter((item) => {
         return item.title.toLowerCase().includes(keyword.toLowerCase());
       });
-      // filter other by description
-      filteredResults = allProduct.filter((item) => {
-        return item.description.toLowerCase().includes(keyword.toLowerCase());
-      });
-      // by category
-      filteredResults = allProduct.filter((item) => {
-        return item.category.toLowerCase().includes(keyword.toLowerCase());
-      });
-
       return filteredResults;
     }
 
