@@ -25,11 +25,12 @@ npm install
 ```mermaid
 flowchart LR
 
-auth
-api
+auth[Auth]
 token
 localstorage
 cart
+
+
 
 ```
 
@@ -103,8 +104,12 @@ v0.0.0
 
 v1.0.0 Main Site
 
-- [ ] v1.01 Web
-- [ ] v1.02 RWD
+- [x] v1.01 Web
+- [x] v1.02 RWD
+  - [ ] Header
+  - [ ] Footer
+  - [ ] Nav
+  - [ ] Main
 - [ ] v1.03 PWA
 
 v2.0.0 Cross-platform
