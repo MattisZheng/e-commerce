@@ -9,7 +9,9 @@ const Header = () => {
   return (
     <header className="flex h-24 bg-slate-500 items-center">
       <div className="flex-auto">
-        <Link to="/">Logo</Link>
+        <Link to="/" className="relative">
+          <img src="../../public/polaroid-camera_512.png" alt="" className="w-20" />
+        </Link>
       </div>
       <div className="flex-auto">
         <SearchBox />

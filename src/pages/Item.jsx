@@ -14,8 +14,8 @@ const Item = () => {
     try {
       const data = await res.json(); // parse json
       setProduct(data);
-    } catch (error) {
-      console.error(error);
+    } catch (err) {
+      console.error(err);
     }
     // set data to state
   }

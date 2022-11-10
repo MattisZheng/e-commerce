@@ -1,7 +1,12 @@
+import Cookie from "../components/Cookie";
+
 const Footer = () => {
-  return <div>Footer
-    <a href=""></a>
-  </div>;
+  return (
+    <div>
+      <Cookie />
+      <a href="https://github.com/MattisZheng/e-commerce">GitHub</a>
+    </div>
+  );
 };
 
 export default Footer;

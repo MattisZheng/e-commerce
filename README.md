@@ -5,9 +5,13 @@
 ## Build with
 
 - React
-- Fake Store API (https://fakestoreapi.com/)
+- TypeScript
+- Vite
 - Tailwind
+- Fake Store API (https://fakestoreapi.com/)
 - Vitest
+- React Router
+- React Swiper
 
 ## Usage
 

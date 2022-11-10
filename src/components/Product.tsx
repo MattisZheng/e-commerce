@@ -1,5 +1,3 @@
-import React from "react";
-
 const Product = ({ title, image, price, description, category }) => {
   return (
     <section>
