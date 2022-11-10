@@ -1,8 +1,12 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 
-// load cart from local storage
+// cartItem
+
+
+// load cart from session storage
 
 const Cart = () => {
+  sessionStorage.setItem("cart", JSON.stringify([]));
 
   // cart icon
 
@@ -13,7 +17,7 @@ const Cart = () => {
     // if cart is empty, show "cart is empty"
     // if cart is not empty, show cart
   }
-  
+
   return <div>Cart</div>;
 };
 

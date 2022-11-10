@@ -54,6 +54,12 @@ const Auth = () => {
     setIsOpen(false);
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log("submitted")
+    authentication();
+  }
+
   const LogoutButton = <button onClick={localStorage.removeItem("token")}>Logout</button>;
   // remove token from session storage
   // if token is correct, show logout button
@@ -71,7 +77,7 @@ const Auth = () => {
         <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
         <button onClick={closeModal}>close</button>
         <div>I am a modal</div>
-        <form action="">
+        <form action="" onSubmit={handleSubmit}>
           <label htmlFor="">Username</label>
           <input type="text" />
           <label htmlFor="">Password</label>
@@ -83,7 +89,7 @@ const Auth = () => {
   );
   // if token is empty, show login form
 
-  return <div>{token === ".." ? LoginButton : LogoutButton}</div>;
+  return <div>{token === "..." ? LoginButton : LogoutButton}</div>;
 };
 
 export default Auth;
