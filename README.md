@@ -128,3 +128,7 @@ v2.0.0 Cross-platform
 - [ ] debounce & throttle
 
 v3.0.0 User Experience
+
+## Credits
+
+[Search icons created by Good Ware - Flaticon](https://www.flaticon.com/free-icons/search)

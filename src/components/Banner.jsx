@@ -11,7 +11,7 @@ const Banner = () => {
     // get all products
     const allProduct = await getAllProduct();
     // randomly select 6 products from all products
-    setBanner(getRandomFromArray(6, allProduct));
+    setBanner(getRandomFromArray(7, allProduct));
   }
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const Banner = () => {
 
   return (
     <div>
-      <Swiper spaceBetween={50} slidesPerView={3}>
+      <Swiper spaceBetween={50} slidesPerView={4}>
         {banner.map((item) => {
           return (
             <SwiperSlide key={item.id}>
