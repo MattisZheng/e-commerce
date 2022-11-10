@@ -17,12 +17,11 @@ const Popular = () => {
   }, []);
 
   return (
-    <div>
-      <h2>popular</h2>
+    <section className="grid grid-cols-4">
       {popular.map((item) => {
         return <Preview id={item.id} title={item.title} price={item.price} image={item.image} rating={item.rating} />;
       })}
-    </div>
+    </section>
   );
 };
 

@@ -6,7 +6,7 @@ import "swiper/css";
 
 const Home = () => {
   return (
-    <main>
+    <main className="w-2/3 mx-auto">
       <Banner />
       <Category />
       <Popular />
