@@ -16,7 +16,7 @@ function SearchResult({ keyword }) {
       filteredResults = allProduct.filter((item) => {
         return item.title.toLowerCase().includes(keyword.toLowerCase());
       });
-      return filteredResults;
+      // return "no results" if no results
     }
 
     const filteredResults = await filterResults(allProduct);
@@ -33,13 +33,6 @@ function SearchResult({ keyword }) {
         case "rating":
           return filteredResults.sort((a, b) => b.rating.count - a.rating.count);
       }
-
-      // sort by relevance (default)
-      // sort by low to high
-      // sort by high
-      // sort by rate
-      // sort by count
-      // if result is empty, show "no result found"
     }
 
     const sortedResults = await sortResults(filteredResults, sortingMethod);
@@ -51,7 +44,7 @@ function SearchResult({ keyword }) {
     gerResults();
   }, [searchResult]);
 
-  function handleChange(e) {
+  function handleChange(e: any) {
     setSortingMethod(e.target.value);
   }
 
@@ -69,23 +62,22 @@ function SearchResult({ keyword }) {
       <div className="grid grid-cols-3">
         {
           // show search result
-          searchResult
-            ? searchResult.map((item) => {
-                return (
-                  <div key={item.id}>
-                    <Preview
-                      id={item.id}
-                      title={item.title}
-                      price={item.price}
-                      image={item.image}
-                      rate={item.rating.rate}
-                      count={item.rating.count}
-                      className="text-gray-300"
-                    />
-                  </div>
-                );
-              })
-            : "no result found"
+          searchResult &&
+            searchResult.map((item) => {
+              return (
+                <div key={item.id}>
+                  <Preview
+                    id={item.id}
+                    title={item.title}
+                    price={item.price}
+                    image={item.image}
+                    rate={item.rating.rate}
+                    count={item.rating.count}
+                    className="text-gray-300"
+                  />
+                </div>
+              );
+            })
         }
       </div>
     </div>

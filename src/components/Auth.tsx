@@ -35,10 +35,8 @@ const Auth = () => {
   // if token is incorrect, remove token from session storage and show login form
 
   // init authentication token
-  sessionStorage.setItem("token", "...");
-  const [token, setToken] = useState(sessionStorage.getItem("token"));
 
-  let subtitle;
+  let subtitle: any;
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
   function openModal() {
@@ -54,17 +52,13 @@ const Auth = () => {
     setIsOpen(false);
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    console.log("submitted");
-  }
-
-  const LogoutButton = <button onClick={localStorage.removeItem("token")}>Logout</button>;
   // remove token from session storage
   // if token is correct, show logout button
-  const LoginButton = (
+  // if token is empty, show login form
+
+  return (
     <div>
-      <button onClick={openModal}>Open Modal</button>
+      <button onClick={openModal}>Auth</button>
       <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
@@ -76,19 +70,9 @@ const Auth = () => {
         <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
         <button onClick={closeModal}>close</button>
         <div>I am a modal</div>
-        <form action="" onSubmit={handleSubmit}>
-          <label htmlFor="">Username</label>
-          <input type="text" />
-          <label htmlFor="">Password</label>
-          <input type="text" />
-          <button>Submit</button>
-        </form>
       </Modal>
     </div>
   );
-  // if token is empty, show login form
-
-  return <div>{token === "..." ? LoginButton : LogoutButton}</div>;
 };
 
 export default Auth;
