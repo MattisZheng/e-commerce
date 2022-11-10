@@ -56,8 +56,7 @@ const Auth = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("submitted")
-    authentication();
+    console.log("submitted");
   }
 
   const LogoutButton = <button onClick={localStorage.removeItem("token")}>Logout</button>;

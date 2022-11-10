@@ -25,3 +25,6 @@
  */
 @tailwind variants;
 
+* {
+  font-family: "Carter One", cursive;
+}
