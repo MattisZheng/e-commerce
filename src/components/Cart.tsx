@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
+// @ts-ignore third party library
 import Modal from "react-modal";
-// cartItem
 
 const customStyles = {
   overlay: {
@@ -55,11 +55,14 @@ const Cart = () => {
 
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
-    subtitle.style.color = "#f00";
   }
 
   function closeModal() {
     setIsOpen(false);
+  }
+
+  function renderCart() {
+    // render cart items
   }
 
   return (
