@@ -1,6 +1,6 @@
 const Image = () => {
   return (
-    <div>ImagePreview</div>
+    <div>Image</div>
   )
 }
 

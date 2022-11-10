@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import SearchBox from "../components/SearchBox";
@@ -8,7 +7,7 @@ import Cart from "../components/Cart";
 
 const Header = () => {
   return (
-    <header className="flex h-24 bg-slate-500">
+    <header className="flex h-24 bg-slate-500 items-center">
       <div className="flex-auto">
         <Link to="/">Logo</Link>
       </div>

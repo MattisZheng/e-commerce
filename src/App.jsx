@@ -7,9 +7,6 @@ import Item from "./pages/Item";
 import Search from "./pages/Search";
 
 function App() {
-  
-  
-
   return (
     <div>
       <BrowserRouter>

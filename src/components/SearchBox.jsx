@@ -11,13 +11,16 @@ const SearchBox = () => {
   function handleSubmit(e) {
     e.preventDefault();
     location.href = `/search/${keyword}`;
-  };
+  }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="keyword"></label>
-      <input type="text" id="keyword" placeholder="search" autoComplete="off" onChange={handleChange} />
-      <button>Search</button>
+    <form onSubmit={handleSubmit} className="flex">
+      <label htmlFor="keyword">
+        <input type="text" id="keyword" placeholder="search" autoComplete="off" onChange={handleChange} className="rounded-full w-4/5" />
+      </label>
+      <button>
+        <img src="../../public/search.png" alt="" className="w-7" />
+      </button>
     </form>
   );
 };
