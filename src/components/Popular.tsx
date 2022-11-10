@@ -19,7 +19,11 @@ const Popular = () => {
   return (
     <section className="grid grid-cols-4">
       {popular.map((item) => {
-        return <Preview id={item.id} title={item.title} price={item.price} image={item.image} rating={item.rating} />;
+        return (
+          <div key={item.id}>
+            <Preview id={item.id} title={item.title} price={item.price} image={item.image} rating={item.rating} />
+          </div>
+        );
       })}
     </section>
   );

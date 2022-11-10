@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Recommendation from "./Recommendation";
 
 const SearchBox = () => {
   const [keyword, setKeyword] = useState("");
@@ -16,7 +17,7 @@ const SearchBox = () => {
   return (
     <form onSubmit={handleSubmit} className="flex">
       <label htmlFor="keyword"></label>
-      <input type="text" id="keyword" placeholder="search" autoComplete="off" onChange={handleChange} className="rounded-full w-4/5 " />
+      <input type="text" id="keyword" placeholder="search" autoComplete="off" onChange={handleChange} className="rounded-full w-4/5 pl-4" />
       <button>
         <img src="../../public/search_512.png" alt="" className="w-7 m-1" />
       </button>
