@@ -8,7 +8,7 @@ const Search = () => {
   return (
     <main>
       <SearchResult keyword={keyword} />
-      {/* <Recommendation /> */}
+      <Recommendation />
     </main>
   );
 };

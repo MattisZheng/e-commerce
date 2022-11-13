@@ -25,3 +25,14 @@
  */
 @tailwind variants;
 
+* {
+  font-family: "Carter One", cursive;
+}
+
+@layer base {
+  :root {
+    --color-primary: 227 59 51;
+    --color-secondary: 85 163 149;
+    --color-base: 230 207 166;
+  }
+}

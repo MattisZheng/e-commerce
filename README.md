@@ -5,9 +5,13 @@
 ## Build with
 
 - React
-- Fake Store API (https://fakestoreapi.com/)
+- TypeScript
+- Vite
 - Tailwind
+- Fake Store API (https://fakestoreapi.com/)
 - Vitest
+- React Router
+- React Swiper
 
 ## Usage
 
@@ -131,4 +135,5 @@ v3.0.0 User Experience
 
 ## Credits
 
-[Search icons created by Good Ware - Flaticon](https://www.flaticon.com/free-icons/search)
+- [Search icons created by Good Ware - Flaticon](https://www.flaticon.com/free-icons/search)
+- [Shopping cart icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/shopping-cart)
