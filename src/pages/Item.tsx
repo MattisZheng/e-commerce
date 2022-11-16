@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import Product from "../components/Product";
-import Recommendation from "../components/Banner";
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import Product from '../components/Product';
+import Recommendation from '../components/Banner';
 
 const Item = () => {
   let { id } = useParams();
@@ -12,12 +12,11 @@ const Item = () => {
   async function getItem(id) {
     const res = await fetch(`https://fakestoreapi.com/products/${id}`); // fetch from api
     try {
-      const data = await res.json(); // parse json
+      const data = await res.json();
       setProduct(data);
     } catch (err) {
-      console.error(err);
+      console.log(err);
     }
-    // set data to state
   }
 
   useEffect(() => {
@@ -29,7 +28,7 @@ const Item = () => {
   return (
     <main>
       <Product
-        id = {product.id}
+        id={product.id}
         title={product.title}
         price={product.price}
         image={product.image}

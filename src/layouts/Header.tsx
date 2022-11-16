@@ -10,7 +10,7 @@ const Header = () => {
     <header className="flex h-24 bg-slate-500 items-center">
       <div className="flex-auto">
         <Link to="/" className="relative">
-          <img src="../../public/polaroid-camera_512.png" alt="" className="w-20" />
+          <img src="../../public/images/polaroid-camera_512.png" alt="logo" className="w-20 border" />
         </Link>
       </div>
       <div className="flex-auto">
