@@ -24,62 +24,6 @@ npm install
 
 ## Doc
 
-### Logic flow
-
-```mermaid
-flowchart LR
-
-auth[Auth]
-token
-localstorage
-cart
-
-
-
-```
-
-### UI flow
-
-```mermaid
-flowchart LR
-
-app[App]
-  header[Header]
-    searchBox[Search]
-    auth[Auth]
-    cart[Cart]
-  main[Main]
-    home[Home Page]
-      swiper[Swiper]
-      category[Category]
-      popular[Popular]
-      sale[Sale]
-    search[Search Page]
-      result[Result]
-    item[Item Page]
-      product[Product]
-        recommendation[recommendation]
-  footer[Footer]
-
-app --> header & home & search & item
-  header --> search & auth & cart
-  home --> swiper & category & popular & sale
-  search --> result
-  item --> product --> recommendation
-```
-
-### Data flow
-
-```mermaid
-flowchart LR
-
-user[User]
-  accountInfo[Account Info]
-  cart[Cart]
-
-user --> accountInfo & cart
-```
-
 ## Contribute guide
 
 ## License
@@ -104,17 +48,12 @@ v0.0.0
 - [x] v0.08 Routing
 - [x] v0.09 Auth
 - [x] v0.10 Cart
-- [x] v0.12 Unit Testing
+- [x] v0.11 Unit Testing
 
 v1.0.0 Main Site
 
 - [x] v1.01 Web
 - [x] v1.02 RWD
-  - [ ] Header
-  - [ ] Footer
-  - [ ] Nav
-  - [ ] Main
-- [ ] v1.03 PWA
 
 v2.0.0 Cross-platform
 
@@ -126,9 +65,7 @@ v2.0.0 Cross-platform
     - [ ] title
     - [ ] filter
 - [ ] v2.02 lazy load
-- [ ] v2.03 cart
-  - [ ] modal
-  - [ ] search
+
 - [ ] debounce & throttle
 
 v3.0.0 User Experience

@@ -1,7 +1,21 @@
 import { useState, useEffect } from 'react';
 import Image from './Image';
 
-const Product = ({ id, title, price, image, description, category }) => {
+const Product = ({
+  id,
+  title,
+  price,
+  image,
+  description,
+  category,
+}: {
+  id: number;
+  title: string;
+  price: number;
+  image: string;
+  description: string;
+  category: string;
+}) => {
   const [count, setCount] = useState(0);
 
   return (
