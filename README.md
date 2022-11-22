@@ -46,9 +46,7 @@ v0.0.0
     - [x] Popularity
     - [x] Rating
 - [x] v0.08 Routing
-- [x] v0.09 Auth
-- [x] v0.10 Cart
-- [x] v0.11 Unit Testing
+- [x] v0.11 Testing
 
 v1.0.0 Main Site
 
