@@ -1,14 +1,14 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Header from './Header';
+import SearchBox from '../components/SearchBox';
 
 export default {
-  title: 'Layouts/Header',
-  component: Header,
-} as ComponentMeta<typeof Header>;
+  title: 'Example/SearchBox',
+  component: SearchBox,
+} as ComponentMeta<typeof SearchBox>;
 
 //👇 We create a “template” of how args map to rendering
-const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
+const Template: ComponentStory<typeof SearchBox> = (args) => <SearchBox {...args} />;
 
 export const FirstStory = Template.bind({});
 

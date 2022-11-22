@@ -1,14 +1,14 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Header from './Header';
+import Product from '../components/Product';
 
 export default {
-  title: 'Layouts/Header',
-  component: Header,
-} as ComponentMeta<typeof Header>;
+  title: 'Components/Product',
+  component: Product,
+} as ComponentMeta<typeof Product>;
 
 //👇 We create a “template” of how args map to rendering
-const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
+const Template: ComponentStory<typeof Product> = (args) => <Product {...args} />;
 
 export const FirstStory = Template.bind({});
 

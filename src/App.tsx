@@ -4,6 +4,7 @@ import Footer from './layouts/Footer';
 import Home from './pages/Home';
 import Item from './pages/Item';
 import Search from './pages/Search';
+import PageNotFound from './pages/PageNotFound';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/item/:id" element={<Item />} />
         <Route path="/search/:keyword" element={<Search />} />
-        <Route path="*" element={<div>404 Not Found</div>} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
     </div>

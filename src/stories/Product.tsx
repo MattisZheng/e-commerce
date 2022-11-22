@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 const Product = ({
   id,
   title,
@@ -15,8 +13,6 @@ const Product = ({
   description: string;
   category: string;
 }) => {
-  const [count, setCount] = useState(0);
-
   return (
     <section>
       <div className="px-10 py-2 grid grid-cols-2">

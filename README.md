@@ -1,11 +1,11 @@
 # E-commerce Template
 
-> E-commerce website build with React.
+> A demo e-commerce website.
 
 ## Build with
 
-- React
 - TypeScript
+- React
 - Vite
 - Tailwind
 - Fake Store API (https://fakestoreapi.com/)
@@ -54,6 +54,8 @@ v1.0.0 Main Site
 
 - [x] v1.01 Web
 - [x] v1.02 RWD
+- [x] v1.04 Storybook
+- [x] v1.03 Cypress
 
 v2.0.0 Cross-platform
 
