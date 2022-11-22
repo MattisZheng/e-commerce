@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import Recommendation from './Recommendation';
+import { useState } from 'react';
 
 const SearchBox = () => {
   const [keyword, setKeyword] = useState('');
