@@ -71,6 +71,3 @@ v2.0.0 Cross-platform
 v3.0.0 User Experience
 
 ## Credits
-
-- [Search icons created by Good Ware - Flaticon](https://www.flaticon.com/free-icons/search)
-- [Shopping cart icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/shopping-cart)
