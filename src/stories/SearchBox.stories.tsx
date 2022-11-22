@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import SearchBox from '../components/SearchBox';
 
 export default {
-  title: 'Example/SearchBox',
+  title: 'Components/SearchBox',
   component: SearchBox,
 } as ComponentMeta<typeof SearchBox>;
 

@@ -1,14 +1,14 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Preview from '../components/Preview';
+import Recommendation from '../components/Recommendation';
 
 export default {
-  title: 'Components/Preview',
-  component: Preview,
-} as ComponentMeta<typeof Preview>;
+  title: 'Components/Recommendation',
+  component: Recommendation,
+} as ComponentMeta<typeof Recommendation>;
 
 //👇 We create a “template” of how args map to rendering
-const Template: ComponentStory<typeof Preview> = (args) => <Preview {...args} />;
+const Template: ComponentStory<typeof Recommendation> = (args) => <Recommendation {...args} />;
 
 export const FirstStory = Template.bind({});
 

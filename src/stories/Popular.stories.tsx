@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Popular from './Popular';
+import Popular from '../components/Popular';
 
 export default {
   title: 'Components/Popular',

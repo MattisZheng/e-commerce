@@ -8,7 +8,7 @@ import PageNotFound from './pages/PageNotFound';
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -17,7 +17,7 @@ function App() {
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 

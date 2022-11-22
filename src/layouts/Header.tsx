@@ -5,10 +5,10 @@ import Recommendation from '../components/Recommendation';
 
 const Header = () => {
   return (
-    <header className="flex bg-teal-500 justify-center">
+    <header className="flex bg-gray-500 justify-center">
       <div>
         <Link to="/">
-          <img src="../../public/images/polaroid-camera_512.png" alt="logo" className="w-20" />
+          Home
         </Link>
       </div>
       <div className="">

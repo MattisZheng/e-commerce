@@ -18,7 +18,7 @@ const SearchBox = () => {
     <form onSubmit={handleSubmit} className="flex">
       <input type="text" id="keyword" placeholder="search" autoComplete="off" onChange={handleChange} className="rounded-full pl-4" />
       <button>
-        <img src="../../public/images/search_512.png" alt="search" className="w-8 m-1" />
+        Search
       </button>
     </form>
   );
