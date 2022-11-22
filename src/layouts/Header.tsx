@@ -7,15 +7,16 @@ const Header = () => {
   return (
     <header className="flex bg-gray-500 justify-center">
       <div>
-        <Link to="/">
-          Home
-        </Link>
+        <Link to="/">Home</Link>
       </div>
       <div className="">
         <SearchBox />
         <Recommendation />
       </div>
-      <div className=""></div>
+      <div className="">
+        <div>Auth</div>
+        <div>Cart</div>
+      </div>
     </header>
   );
 };

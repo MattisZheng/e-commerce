@@ -15,11 +15,9 @@ const SearchBox = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex">
+    <form onSubmit={handleSubmit}>
       <input type="text" id="keyword" placeholder="search" autoComplete="off" onChange={handleChange} className="rounded-full pl-4" />
-      <button>
-        Search
-      </button>
+      <button>Search</button>
     </form>
   );
 };
