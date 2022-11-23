@@ -8,7 +8,6 @@ const Search = () => {
   return (
     <main>
       <SearchResult keyword={keyword} />
-      <Recommendation />
     </main>
   );
 };

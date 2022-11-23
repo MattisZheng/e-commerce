@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-const Preview = ({ id, title, price, image, rate, count, className }) => {
+const Preview = ({ id, title, price, image, rate, count }) => {
   return (
-    <div className={className}>
+    <div className="border-solid border-2 m-2">
       <Link to={`/item/${id}`} target="_blank">
-        <img src={image} alt={title} className="w-4/5"/>
+        <img src={image} alt={title}  />
         <p>{title}</p>
         <p>$ {price}</p>
         <p>{rate}</p>
