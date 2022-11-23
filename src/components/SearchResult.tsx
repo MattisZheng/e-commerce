@@ -49,7 +49,7 @@ function SearchResult({ keyword }) {
   }
 
   return (
-    <div>
+    <section>
       <div>
         <label htmlFor="method">sort by</label>
         <select name="method" id="" onChange={handleChange}>
@@ -80,7 +80,7 @@ function SearchResult({ keyword }) {
             })
         }
       </div>
-    </div>
+    </section>
   );
 }
 

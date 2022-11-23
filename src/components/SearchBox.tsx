@@ -14,9 +14,16 @@ const SearchBox = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" id="keyword" placeholder="search" autoComplete="off" onChange={handleChange} className="rounded-full pl-4" />
-      <button>Search</button>
+    <form onSubmit={handleSubmit} className="border-solid border-2 m-2">
+      <input
+        type="text"
+        id="keyword"
+        placeholder="search"
+        autoComplete="off"
+        onChange={handleChange}
+        className="rounded-full pl-4 border-solid border-2 m-2 p-2"
+      />
+      <button className="border-solid border-2 m-2">Search</button>
     </form>
   );
 };

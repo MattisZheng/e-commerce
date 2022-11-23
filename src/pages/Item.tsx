@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Product from '../components/Product';
-import Recommendation from '../components/Banner';
+import Popular from '../components/Popular';
 
 const Item = () => {
   let { id } = useParams();
@@ -37,7 +37,7 @@ const Item = () => {
         // rate={rate}
         // count={count}
       />
-      <Recommendation />
+      <Popular />
     </main>
   );
 };

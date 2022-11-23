@@ -17,7 +17,7 @@ const Popular = () => {
   }, []);
 
   return (
-    <section className="grid grid-cols-4">
+    <section className="grid grid-cols-5 border-solid border-2 m-2">
       {popular.map((item) => {
         return (
           <div key={item.id}>

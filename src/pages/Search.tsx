@@ -1,6 +1,6 @@
-import { useParams } from "react-router-dom";
-import SearchResult from "../components/SearchResult";
-import Recommendation from "../components/Banner";
+import { useParams } from 'react-router-dom';
+import SearchResult from '../components/SearchResult';
+import Popular from '../components/Popular';
 
 const Search = () => {
   const { keyword } = useParams();
@@ -8,6 +8,7 @@ const Search = () => {
   return (
     <main>
       <SearchResult keyword={keyword} />
+      <Popular />
     </main>
   );
 };
