@@ -13,9 +13,11 @@ const Banner = () => {
 
   async function getBanner() {
     // get all products
+
     const allProduct = await getAllProduct();
-    // randomly select 6 products from all products
     setBanner(getRandomFromArray(7, allProduct));
+
+    // randomly select 6 products from all products
   }
 
   useEffect(() => {

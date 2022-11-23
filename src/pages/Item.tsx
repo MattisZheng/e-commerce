@@ -10,7 +10,7 @@ const Item = () => {
 
   // fetch product data from API
   async function getItem(id) {
-    const res = await fetch(`https://fakestoreapi.com/products/${id}`); // fetch from api
+    const res = await fetch(`https://fakestoreapi.com/products/${id}`);
     try {
       const data = await res.json();
       setProduct(data);
@@ -22,8 +22,6 @@ const Item = () => {
   useEffect(() => {
     getItem(id);
   }, []);
-
-  // let { rate, count } = product.rating;
 
   return (
     <main>

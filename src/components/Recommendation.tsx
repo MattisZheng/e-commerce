@@ -19,9 +19,9 @@ const Recommendation = () => {
   }, []);
 
   return (
-    <div className="flex flex-wrap border-solid border-2 m-2">
+    <div className="flex flex-wrap">
       {recommendation.map((product) => (
-        <div className="border-solid border-2 m-2 p-2 text-sm" key={product.id}>
+        <div className=" text-sm" key={product.id}>
           <Link to={`/item/${product.id}`} target="_blank">
             {getShortenedTitle(15, product.title)}
           </Link>

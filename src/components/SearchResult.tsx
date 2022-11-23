@@ -1,15 +1,14 @@
-import { useState, useEffect } from "react";
-import getAllProduct from "../utils/getAllProduct";
-import Preview from "./Preview";
+import { useState, useEffect } from 'react';
+import getAllProduct from '../utils/getAllProduct';
+import Preview from './Preview';
 
 function SearchResult({ keyword }) {
   const [searchResult, setSearchResult] = useState([]);
-  const [sortingMethod, setSortingMethod] = useState("relevant");
+  const [sortingMethod, setSortingMethod] = useState('relevant');
 
   async function gerResults() {
-    // get all products
     const allProduct = await getAllProduct();
-    // get filtered products
+
     async function filterResults(allProduct) {
       let filteredResults = [];
       // filter by title
@@ -22,16 +21,16 @@ function SearchResult({ keyword }) {
     const filteredResults = await filterResults(allProduct);
 
     // sort filtered products
-    async function sortResults(filteredResults, sortingMethod) {
+    async function sortResults(filteredResults: any, sortingMethod: string) {
       switch (sortingMethod) {
-        case "relevant":
+        case 'relevant':
           return filteredResults;
-        case "price-high-low":
-          return filteredResults.sort((a, b) => b.price - a.price);
-        case "price-low-high":
-          return filteredResults.sort((a, b) => a.price - b.price);
-        case "rating":
-          return filteredResults.sort((a, b) => b.rating.count - a.rating.count);
+        case 'price-high-low':
+          return filteredResults.sort((a: any, b: any) => b.price - a.price);
+        case 'price-low-high':
+          return filteredResults.sort((a: any, b: any) => a.price - b.price);
+        case 'rating':
+          return filteredResults.sort((a: any, b: any) => b.rating.count - a.rating.count);
       }
     }
 
@@ -66,15 +65,7 @@ function SearchResult({ keyword }) {
             searchResult.map((item) => {
               return (
                 <div key={item.id}>
-                  <Preview
-                    id={item.id}
-                    title={item.title}
-                    price={item.price}
-                    image={item.image}
-                    rate={item.rating.rate}
-                    count={item.rating.count}
-                    className="text-gray-300"
-                  />
+                  <Preview id={item.id} title={item.title} price={item.price} image={item.image} rate={item.rating.rate} count={item.rating.count} />
                 </div>
               );
             })

@@ -15,23 +15,22 @@ const Product = ({
   description: string;
   category: string;
 }) => {
-
   return (
-    <section className="border-solid border-2 m-2">
-      <div className="px-10 py-2 grid grid-cols-2">
-        <div className="container border-solid border-2 m-2">
+    <section>
+      <div className="px-10 py-2">
+        <div className="container">
           <img src={image} alt={title} />
         </div>
-        <div className="container border-solid border-2 m-2">
-          <h2 className="text-3xl font-bold m-1">{title}</h2>
+        <div className="container ">
+          <h2 className="text-3xl font-bold">{title}</h2>
           <p>{category}</p>
           <div className="flex justify-between">
             <p>$ {price}</p>
           </div>
         </div>
       </div>
-      
-      <div className="border-solid border-2 m-2 p-2">
+
+      <div>
         <p>{description}</p>
       </div>
     </section>
