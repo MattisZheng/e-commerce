@@ -27,21 +27,28 @@ const Banner = () => {
   return (
     <Swiper
       loop={true}
-      autoplay={{
-        delay: 1800,
-        disableOnInteraction: false,
-      }}
+      // autoplay={{
+      //   delay: 2000,
+      //   disableOnInteraction: false,
+      //   pauseOnMouseEnter: true,
+      // }}
       navigation={true}
       pagination={{ clickable: true }}
       modules={[Autoplay, Navigation, Pagination]}
+      className="border-orange-500 border-2 m-2"
     >
-      {banner.map((item) => {
-        return (
-          <SwiperSlide key={item.id}>
-            <Preview id={item.id} title={item.title} price={item.price} image={item.image} rating={item.rating} />
-          </SwiperSlide>
-        );
-      })}
+      <div className="border-orange-500 border-2 m-2">left</div>
+      <div className="flex">
+        {banner.map((item) => {
+          return (
+            <SwiperSlide key={item.id}>
+              <Preview id={item.id} title={item.title} price={item.price} image={item.image} rating={item.rating} />
+            </SwiperSlide>
+          );
+        })}
+      </div>
+      <div className="border-orange-500 border-2 m-2">right</div>
+      <div className="border-orange-500 border-2 m-2">bottom</div>
     </Swiper>
   );
 };
