@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import getAllProduct from '../utils/getAllProduct';
-import Preview from './Preview';
+import Preview from '../components/Preview';
 
 function SearchResult({ keyword }) {
   const [searchResult, setSearchResult] = useState([]);

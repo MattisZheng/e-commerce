@@ -35,19 +35,16 @@ const Banner = () => {
       navigation={true}
       pagination={{ clickable: true }}
       modules={[Autoplay, Navigation, Pagination]}
-      className="border-orange-500 border-2 m-2"
+      className="border-orange-500 border-2"
     >
-      <div className="border-orange-500 border-2 m-2">left</div>
-      <div className="flex">
-        {banner.map((item) => {
-          return (
-            <SwiperSlide key={item.id}>
-              <Preview id={item.id} title={item.title} price={item.price} image={item.image} rating={item.rating} />
-            </SwiperSlide>
-          );
-        })}
-      </div>
-      <div className="border-orange-500 border-2 m-2">right</div>
+      {banner.map((item) => {
+        return (
+          <SwiperSlide key={item.id}>
+            <Preview id={item.id} title={item.title} price={item.price} image={item.image} rating={item.rating} />
+          </SwiperSlide>
+        );
+      })}
+
       <div className="border-orange-500 border-2 m-2">bottom</div>
     </Swiper>
   );

@@ -12,7 +12,7 @@ const Recommendation = () => {
     // get all products
     const allProduct = await getAllProduct();
     // randomly select 6 products
-    setRecommendation(getRandomFromArray(4, allProduct));
+    setRecommendation(getRandomFromArray(3, allProduct));
   }
   useEffect(() => {
     getRecommendation();
@@ -20,13 +20,14 @@ const Recommendation = () => {
 
   return (
     <div className="flex flex-wrap">
-      {recommendation.map((product) => (
-        <div className=" text-sm" key={product.id}>
-          <Link to={`/item/${product.id}`} target="_blank">
-            {getShortenedTitle(15, product.title)}
-          </Link>
-        </div>
-      ))}
+      {recommendation &&
+        recommendation.map((product) => (
+          <div className=" text-sm" key={product.id}>
+            <Link to={`/item/${product.id}`} target="_blank">
+              {getShortenedTitle(10, product.title)}
+            </Link>
+          </div>
+        ))}
     </div>
   );
 };

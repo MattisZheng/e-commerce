@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Recommendation from '../stories/Recommendation';
 
 const SearchBox = () => {
   const [keyword, setKeyword] = useState('');
@@ -14,9 +15,10 @@ const SearchBox = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="">
+    <form onSubmit={handleSubmit} className="border-solid border-2 m-2">
       <input type="text" id="keyword" placeholder="search" autoComplete="off" onChange={handleChange} className="rounded-full pl-4" />
-      <button>Search</button>
+      <button className="border-solid border-2 m-2">Search</button>
+      <Recommendation />
     </form>
   );
 };

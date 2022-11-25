@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import SearchResult from '../components/SearchResult';
+import SearchResult from '../contexts/SearchResult';
 import Popular from '../components/Popular';
 
 const Search = () => {

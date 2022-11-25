@@ -1,8 +1,9 @@
 const Footer = () => {
   return (
-    <div className="text-center">
+    <footer className="text-center flex bg-gray-500 justify-center p-2 gap-3">
+      <a href="">About</a>
       <a href="https://github.com/MattisZheng/e-commerce">GitHub</a>
-    </div>
+    </footer>
   );
 };
 
