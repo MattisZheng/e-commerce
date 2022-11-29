@@ -1,14 +1,12 @@
 import { useState } from 'react';
 
 const Product = ({
-  id,
   title,
   price,
   image,
   description,
   category,
 }: {
-  id: number;
   title: string;
   price: number;
   image: string;
