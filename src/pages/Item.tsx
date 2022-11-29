@@ -6,10 +6,10 @@ import Popular from '../components/Popular';
 const Item = () => {
   let { id } = useParams();
 
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState<any>({});
 
   // fetch product data from API
-  async function getItem(id) {
+  async function getItem(id:any) {
     const res = await fetch(`https://fakestoreapi.com/products/${id}`);
     try {
       const data = await res.json();
@@ -24,7 +24,7 @@ const Item = () => {
   }, []);
 
   return (
-    <main>
+    <>
       <Product
         id={product.id}
         title={product.title}
@@ -32,11 +32,9 @@ const Item = () => {
         image={product.image}
         description={product.description}
         category={product.category}
-        // rate={rate}
-        // count={count}
       />
       <Popular />
-    </main>
+    </>
   );
 };
 

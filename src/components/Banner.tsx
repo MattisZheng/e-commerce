@@ -9,15 +9,13 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const Banner = () => {
-  const [banner, setBanner] = useState([]);
+  const [banner, setBanner] = useState<any>([]);
 
   async function getBanner() {
     // get all products
-
-    const allProduct = await getAllProduct();
-    setBanner(getRandomFromArray(7, allProduct));
-
+    const allProduct: string[] = await getAllProduct();
     // randomly select 6 products from all products
+    setBanner(getRandomFromArray(6, allProduct));
   }
 
   useEffect(() => {
@@ -37,7 +35,7 @@ const Banner = () => {
       modules={[Autoplay, Navigation, Pagination]}
       className="border-orange-500 border-2"
     >
-      {banner.map((item) => {
+      {banner.map((item: any) => {
         return (
           <SwiperSlide key={item.id}>
             <Preview id={item.id} title={item.title} price={item.price} image={item.image} rating={item.rating} />

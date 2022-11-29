@@ -2,17 +2,17 @@ import { useState, useEffect } from 'react';
 import getAllProduct from '../utils/getAllProduct';
 import Preview from '../components/Preview';
 
-function SearchResult({ keyword }) {
-  const [searchResult, setSearchResult] = useState([]);
-  const [sortingMethod, setSortingMethod] = useState('relevant');
+function SearchResult({ keyword }: { keyword: any }) {
+  const [searchResult, setSearchResult] = useState<any>([]);
+  const [sortingMethod, setSortingMethod] = useState<string>('relevant');
 
   async function gerResults() {
-    const allProduct = await getAllProduct();
+    const allProduct: string[] | null = await getAllProduct();
 
-    async function filterResults(allProduct) {
+    async function filterResults(allProduct: any) {
       let filteredResults = [];
       // filter by title
-      filteredResults = allProduct.filter((item) => {
+      filteredResults = allProduct.filter((item: any) => {
         return item.title.toLowerCase().includes(keyword.toLowerCase());
       });
       // return "no results" if no results
@@ -29,8 +29,6 @@ function SearchResult({ keyword }) {
           return filteredResults.sort((a: any, b: any) => b.price - a.price);
         case 'price-low-high':
           return filteredResults.sort((a: any, b: any) => a.price - b.price);
-        case 'rating':
-          return filteredResults.sort((a: any, b: any) => b.rating.count - a.rating.count);
       }
     }
 
@@ -62,10 +60,10 @@ function SearchResult({ keyword }) {
         {
           // show search result
           searchResult &&
-            searchResult.map((item) => {
+            searchResult.map((item: any) => {
               return (
                 <div key={item.id}>
-                  <Preview id={item.id} title={item.title} price={item.price} image={item.image} rate={item.rating.rate} count={item.rating.count} />
+                  <Preview id={item.id} title={item.title} price={item.price} image={item.image} rating={item.rating} />
                 </div>
               );
             })

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Recommendation from '../stories/Recommendation';
+import Recommendation from './Recommendation';
 
 const SearchBox = () => {
   const [keyword, setKeyword] = useState('');

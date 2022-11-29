@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom';
 
-const Preview = ({ id, title, price, image, rating }) => {
+const Preview = ({ id, title, price, image, rating }: {
+  id: string;
+  title: string;
+  price: number;
+  image: string;
+  rating: any;
+}) => {
   return (
     <div className="h-auto border-black order-solid border-2 m-10 p-2 bg-slate-500 ">
       <Link to={`/item/${id}`} target="_blank">
