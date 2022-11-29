@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import getAllProduct from '../utils/getAllProduct';
-import Preview from '../components/Preview';
+import Preview from './Preview';
 
 function SearchResult({ keyword }) {
   const [searchResult, setSearchResult] = useState([]);
@@ -21,16 +21,16 @@ function SearchResult({ keyword }) {
     const filteredResults = await filterResults(allProduct);
 
     // sort filtered products
-    async function sortResults(filteredResults: any, sortingMethod: string) {
+    async function sortResults(filteredResults, sortingMethod) {
       switch (sortingMethod) {
         case 'relevant':
           return filteredResults;
         case 'price-high-low':
-          return filteredResults.sort((a: any, b: any) => b.price - a.price);
+          return filteredResults.sort((a, b) => b.price - a.price);
         case 'price-low-high':
-          return filteredResults.sort((a: any, b: any) => a.price - b.price);
+          return filteredResults.sort((a, b) => a.price - b.price);
         case 'rating':
-          return filteredResults.sort((a: any, b: any) => b.rating.count - a.rating.count);
+          return filteredResults.sort((a, b) => b.rating.count - a.rating.count);
       }
     }
 
@@ -43,7 +43,7 @@ function SearchResult({ keyword }) {
     gerResults();
   }, [searchResult]);
 
-  function handleChange(e: any) {
+  function handleChange(e) {
     setSortingMethod(e.target.value);
   }
 
