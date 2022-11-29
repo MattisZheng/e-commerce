@@ -9,7 +9,7 @@ const Preview = ({ id, title, price, image, rating }: {
 }) => {
   return (
     <div className="h-auto border-black order-solid border-2 m-10 p-2 bg-slate-500 ">
-      <Link to={`/item/${id}`} target="_blank">
+      <Link to={`/item/${id}`} >
         <img src={image} alt={title} className="h-48" />
         <p>{title}</p>
         <p className="h-auto">
