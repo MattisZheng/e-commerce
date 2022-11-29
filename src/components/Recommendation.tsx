@@ -23,7 +23,7 @@ const Recommendation = () => {
       {recommendation &&
         recommendation.map((product: any) => (
           <div className=" text-sm" key={product.id}>
-            <Link to={`/item/${product.id}`} target="_blank">
+            <Link to={`./item/${product.id}`} target="_blank">
               {getShortenedTitle(10, product.title)}
             </Link>
           </div>
