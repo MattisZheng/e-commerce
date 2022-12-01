@@ -1,9 +1,9 @@
-import { describe, expect, it } from "vitest";
-import getShortenedPathName from "../getShortPathName";
+import { describe, expect, it } from 'vitest';
+import getShortenedPathName from '../getShortenedTitle';
 
-describe("getShortenedPathName", () => {
-  it("should return a shortened path name", () => {
-    expect(getShortenedPathName(3, "this is a ")).toBe("thi...");
-    expect(getShortenedPathName(5, "1234567890")).toBe("12345...");
+describe('getShortenedPathName', () => {
+  it('should return a shortened path name', () => {
+    expect(getShortenedPathName(3, 'this is a ')).toBe('thi...');
+    expect(getShortenedPathName(5, '1234567890')).toBe('12345...');
   });
 });
