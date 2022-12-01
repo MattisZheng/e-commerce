@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import getAllProduct from '../utils/getAllProduct';
 import getRandomFromArray from '../utils/getRandomFromArray';
-import getShortenedTitle from '../utils/getShortPathName';
+import getShortenedTitle from '../utils/getShortenedTitle';
 
 const Recommendation = () => {
   const [recommendation, setRecommendation] = useState<any>([]);
@@ -23,7 +23,9 @@ const Recommendation = () => {
       {recommendation &&
         recommendation.map((product: any) => (
           <div className="text-sm" key={product.id}>
-            <Link to={`/item/${product.id}`}>Link</Link>
+            <Link to={`/item/${product.id}`}>
+              {getShortenedTitle(10, product.title)}
+            </Link>
           </div>
         ))}
     </div>
