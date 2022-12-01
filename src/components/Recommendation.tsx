@@ -23,6 +23,7 @@ const Recommendation = () => {
       {recommendation &&
         recommendation.map((product: any) => (
           <div className=" text-sm" key={product.id}>
+            <a href={`./item/${product.id}`}>Anchor</a>
             <Link to={`./item/${product.id}`} target="_blank">
               {getShortenedTitle(10, product.title)}
             </Link>

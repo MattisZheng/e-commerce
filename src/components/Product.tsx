@@ -27,7 +27,6 @@ const Product = ({
           </div>
         </div>
       </div>
-
       <div>
         <p>{description}</p>
       </div>
